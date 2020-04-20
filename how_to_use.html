@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ESearchly</title>
+    <link rel="shortcut icon" type="image/png" href="./Images/Logo/esearchly_logo.png">
+    <link rel="stylesheet" href="./Libs/Bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="./Libs/font_awesome/font_awesome.css">
+    <link rel="stylesheet" href="./Libs/JQuery_UI/jquery_ui.css">
+    <link rel="stylesheet" href="./Libs/slick/slick.css">
+    <link rel="stylesheet" href="./Libs/slick/slick-theme.css">
+    <link rel="stylesheet" href="./CSS/style.css">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <a class="navbar-brand navbar-el-height" href="index.html">
+        <img src="./Images/Logo/esearchly_logo.png" alt="ES" class="img">
+    </a>
+    <div class="day-news-block">
+        <input type="submit" id="datepicker" value="03/23/2020" class="day-news searchly-border navbar-el-height">
+    </div>
+    <div class="navbar-collapse justify-content-end" id="navbarSupportedContent">
+        <form class="form-inline">
+            <i class="fas fa-search"></i>
+            <input class="form-control navbar-el-height" type="search" placeholder="Որոնում" aria-label="Search">
+        </form>
+        <ul class="navbar-nav">
+            <li class="nav-item log-in-block">
+                <a href="./sign_in.html" type="button" class="btn btn-light flex-center navbar-el-height log-in">Մուտք</a>
+            </li>
+            <li class="nav-item sign-up-block">
+                <a href="./sign_up.html" type="button" class="btn btn-dark flex-center navbar-el-height sign-up">Գրանցվել</a>
+            </li>
+            <li class="nav-item nav-flag-item dropdown searchly-border navbar-el-height mr-1">
+                <a class="nav-link dropdown-toggle flag-dropdown-btn" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <img src="./Images/flag_images/flag_of_Armenia.jpg" alt="" class="img">
+                </a>
+                <div class="dropdown-menu flag-dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">
+                        <img src="./Images/flag_images/flag_of_the_United_States.jpg" alt="" class="img">
+                    </a>
+                    <a class="dropdown-item" href="#">
+                        <img src="./Images/flag_images/flag_of_Russia.jpg" alt="" class="img">
+                    </a>
+                </div>
+            </li>
+
+            <li class="nav-item dropdown searchly-border navbar-el-height">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fas fa-user"></i>
+                </a>
+
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="./user.html">
+                        <i class="fas fa-user"></i>
+                        <span>Իմ պրոֆիլ</span>
+                    </a>
+                    <a class="dropdown-item" href="./balance.html">
+                        <i class="fas fa-address-card"></i>
+                        <span>Բալանս</span>
+                    </a>
+                    <a class="dropdown-item" href="./privacy_policy.html">
+                        <i class="fas fa-id-card-alt"></i>
+                        <span>Գաղտնիություն</span>
+                    </a>
+                    <a class="dropdown-item" href="./how_to_use.html">
+                        <i class="fas fa-id-card-alt"></i>
+                        <span>Ինչպես օգտվել</span>
+                    </a>
+                    <a class="dropdown-item" href="./FAQ.html">
+                        <i class="fas fa-radiation-alt"></i>
+                        <span>FAQ</span>
+                    </a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="./sign_in.html">
+                        <i class="fas fa-sign-in-alt"></i>
+                        <span>Մուտք / Գրանցվել</span>
+                    </a>
+                </div>
+
+            </li>
+        </ul>
+    </div>
+</nav>
+<!-- End of Navbar -->
+
+<!--News Type container-->
+<div class="container divider">
+    <div class="row">
+        <div class="col-md-8 col-sm-10 col-10 news-type-container">
+            <div class="news-type-block searchly-border">
+                <a href="index.html" class="btn btn-link">
+                    <i class="fas fa-home"></i>
+                    <span>Գլխավոր</span>
+                </a>
+                <a href="top_news.html" class="btn btn-link">
+                    <i class="fas fa-star"></i>
+                    <span>Թոփ</span>
+                </a>
+
+                <div class="dropdown">
+                    <a class="btn btn-link dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-sun"></i>
+                        <span>Կատեգորիաներ</span>
+                    </a>
+
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                        <a class="dropdown-item" href="#">
+                            <i class="fab fa-galactic-republic"></i>
+                            <span>Քաղաքականություն</span>
+                        </a>
+                        <a class="dropdown-item" href="#">
+                            <i class="fas fa-business-time"></i>
+                            <span>Էկոնոմիկա</span>
+                        </a>
+                        <a class="dropdown-item" href="#">
+                            <i class="fas fa-users"></i>
+                            <span>Հասարակություն</span>
+                        </a>
+                        <a class="dropdown-item" href="#">
+                            <i class="far fa-calendar-alt"></i>
+                            <span>Դեպքեր</span>
+                        </a>
+                        <a class="dropdown-item" href="#">
+                            <i class="fas fa-microscope"></i>
+                            <span>Գիտություն</span>
+                        </a>
+                        <a class="dropdown-item" href="#">
+                            <i class="fas fa-basketball-ball"></i>
+                            <span>Սպորտ</span>
+                        </a>
+                        <a class="dropdown-item" href="#">
+                            <i class="fas fa-plane-departure"></i>
+                            <span>Զբոսաշրջություն</span>
+                        </a>
+                    </div>
+                </div>
+
+                <a href="./how_to_use.html" class="btn btn-link how-to-use-link">
+                    <i class="fas fa-address-card"></i>
+                    <span>Ինչպես օգտվել</span>
+                </a>
+            </div>
+
+        </div>
+
+        <div class="col-md-4 col-sm-2 col-2 news-plus-button">
+            <a href="./publication.html" type="button" class="btn publish">
+                <span class="publish-item pr-1">Կատարել հրապարակում</span>
+                <i class="fas fa-plus"></i>
+            </a>
+        </div>
+
+    </div>
+</div>
+<!--End of News Type container-->
+
+
+<div class="container">
+    <div class="how_to_use py-3 px-2">
+
+        <div class="header">
+            <h5>How to use?</h5>
+        </div>
+        <div class="text-block">
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Ab accusantium debitis est in minima nihil numquam omnis quam
+                quidem ut. Amet atque aut deserunt enim esse harum inventore
+                laboriosam, neque nihil nisi, omnis quidem rerum saepe, ullam
+                unde velit voluptas?
+            </p>
+        </div>
+
+        <div class="header">
+            <h5>How to use?</h5>
+        </div>
+        <div class="text-block">
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Ab accusantium debitis est in minima nihil numquam omnis quam
+                quidem ut. Amet atque aut deserunt enim esse harum inventore
+                laboriosam, neque nihil nisi, omnis quidem rerum saepe, ullam
+                unde velit voluptas?
+            </p>
+        </div>
+
+        <div class="header">
+            <h5>How to use?</h5>
+        </div>
+        <div class="text-block">
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Ab accusantium debitis est in minima nihil numquam omnis quam
+                quidem ut. Amet atque aut deserunt enim esse harum inventore
+                laboriosam, neque nihil nisi, omnis quidem rerum saepe, ullam
+                unde velit voluptas?
+            </p>
+        </div>
+
+    </div>
+</div>
+
+
+<!--footer-->
+<footer class="footer d-flex align-items-center py-3 mt-3">
+    <div class="container">
+
+        <div class="row justify-content-between">
+
+            <ul>
+                <li><a href="./index.html" class="btn-link">esearchly.com</a></li>
+                <li><a href="mailto:hello@esearchly.com" class="btn-link">hello@esearchly.com</a></li>
+            </ul>
+
+            <ul>
+                <li><a href="./privacy_policy.html" class="btn-link">Գաղտնիության քաղաքականություն</a></li>
+                <li><a href="./user_agreement.html" class="btn-link">Օգտագործման համաձայնագիր</a></li>
+            </ul>
+
+            <ul>
+                <li><a href="./how_to_use.html" class="btn-link">Ինչպես օգտվել</a></li>
+                <li><a href="./FAQ.html" class="btn-link">Հաճախ տրվող հարցեր</a></li>
+            </ul>
+
+        </div>
+        <!--row-->
+
+        <div class="py-2 copyright">
+            <div>
+                <span>Copyright &copy;</span>
+                <script>document.write(new Date().getFullYear());</script>,
+                <a href="https://nmlab.am/" target="_blank" class="btn-link font-weight-bold">NMLAB LLC</a>
+            </div>
+        </div>
+
+    </div>
+    <!--container-->
+</footer>
+<!--End of footer-->
+
+
+<button id="scroll-to-top" class="scroll-to-top-block">
+    <i class="fas fa-arrow-up"></i>
+</button>
+
+
+<script src="./Libs/jQuery/jquery.js"></script>
+<script src="./Libs/Bootstrap/popper.js"></script>
+<script src="./Libs/Bootstrap/bootstrap.js"></script>
+<script src="./Libs/JQuery_UI/jquery_1.12.4.js"></script>
+<script src="./Libs/JQuery_UI/jquery_ui.js"></script>
+<script src="./JS/datepicker_init.js"></script>
+<script src="./Libs/slick/slick.min.js"></script>
+<script src="./JS/slide_init.js"></script>
+<script src="./JS/scroll.js"></script>
+<script src="./JS/script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,1090 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ESearchly</title>
+    <link rel="shortcut icon" type="image/png" href="./Images/Logo/esearchly_logo.png">
+    <link rel="stylesheet" href="./Libs/Bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="./Libs/font_awesome/font_awesome.css">
+    <link rel="stylesheet" href="./Libs/JQuery_UI/jquery_ui.css">
+    <link rel="stylesheet" href="./Libs/slick/slick.css">
+    <link rel="stylesheet" href="./Libs/slick/slick-theme.css">
+    <link rel="stylesheet" href="./CSS/style.css">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <a class="navbar-brand navbar-el-height" href="index.html">
+        <img src="./Images/Logo/esearchly_logo.png" alt="ES" class="img">
+    </a>
+    <div class="day-news-block">
+        <input type="submit" id="datepicker" value="03/23/2020" class="day-news searchly-border navbar-el-height">
+    </div>
+    <div class="navbar-collapse justify-content-end" id="navbarSupportedContent">
+        <form class="form-inline">
+            <i class="fas fa-search"></i>
+            <input class="form-control navbar-el-height" type="search" placeholder="Որոնում" aria-label="Search">
+        </form>
+        <ul class="navbar-nav">
+            <li class="nav-item log-in-block">
+                <a href="./sign_in.html" type="button" class="btn btn-light flex-center navbar-el-height log-in">Մուտք</a>
+            </li>
+            <li class="nav-item sign-up-block">
+                <a href="./sign_up.html" type="button" class="btn btn-dark flex-center navbar-el-height sign-up">Գրանցվել</a>
+            </li>
+            <li class="nav-item nav-flag-item dropdown searchly-border navbar-el-height mr-1">
+                <a class="nav-link dropdown-toggle flag-dropdown-btn" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <img src="./Images/flag_images/flag_of_Armenia.jpg" alt="" class="img">
+                </a>
+                <div class="dropdown-menu flag-dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">
+                        <img src="./Images/flag_images/flag_of_the_United_States.jpg" alt="" class="img">
+                    </a>
+                    <a class="dropdown-item" href="#">
+                        <img src="./Images/flag_images/flag_of_Russia.jpg" alt="" class="img">
+                    </a>
+                </div>
+            </li>
+
+            <li class="nav-item dropdown searchly-border navbar-el-height">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fas fa-user"></i>
+                </a>
+
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="./user.html">
+                        <i class="fas fa-user"></i>
+                        <span>Իմ պրոֆիլ</span>
+                    </a>
+                    <a class="dropdown-item" href="./balance.html">
+                        <i class="fas fa-address-card"></i>
+                        <span>Բալանս</span>
+                    </a>
+                    <a class="dropdown-item" href="./privacy_policy.html">
+                        <i class="fas fa-id-card-alt"></i>
+                        <span>Գաղտնիություն</span>
+                    </a>
+                    <a class="dropdown-item" href="./how_to_use.html">
+                        <i class="fas fa-id-card-alt"></i>
+                        <span>Ինչպես օգտվել</span>
+                    </a>
+                    <a class="dropdown-item" href="./FAQ.html">
+                        <i class="fas fa-radiation-alt"></i>
+                        <span>FAQ</span>
+                    </a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="./sign_in.html">
+                        <i class="fas fa-sign-in-alt"></i>
+                        <span>Մուտք / Գրանցվել</span>
+                    </a>
+                </div>
+
+            </li>
+        </ul>
+    </div>
+</nav>
+<!-- End of Navbar -->
+
+<!--News Type container-->
+<div class="container divider">
+    <div class="row">
+        <div class="col-md-8 col-sm-10 col-10 news-type-container">
+            <div class="news-type-block searchly-border">
+                <a href="index.html" class="btn btn-link">
+                    <i class="fas fa-home"></i>
+                    <span>Գլխավոր</span>
+                </a>
+                <a href="top_news.html" class="btn btn-link">
+                    <i class="fas fa-star"></i>
+                    <span>Թոփ</span>
+                </a>
+
+                <div class="dropdown">
+                    <a class="btn btn-link dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-sun"></i>
+                        <span>Կատեգորիաներ</span>
+                    </a>
+
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                        <a class="dropdown-item" href="#">
+                            <i class="fab fa-galactic-republic"></i>
+                            <span>Քաղաքականություն</span>
+                        </a>
+                        <a class="dropdown-item" href="#">
+                            <i class="fas fa-business-time"></i>
+                            <span>Էկոնոմիկա</span>
+                        </a>
+                        <a class="dropdown-item" href="#">
+                            <i class="fas fa-users"></i>
+                            <span>Հասարակություն</span>
+                        </a>
+                        <a class="dropdown-item" href="#">
+                            <i class="far fa-calendar-alt"></i>
+                            <span>Դեպքեր</span>
+                        </a>
+                        <a class="dropdown-item" href="#">
+                            <i class="fas fa-microscope"></i>
+                            <span>Գիտություն</span>
+                        </a>
+                        <a class="dropdown-item" href="#">
+                            <i class="fas fa-basketball-ball"></i>
+                            <span>Սպորտ</span>
+                        </a>
+                        <a class="dropdown-item" href="#">
+                            <i class="fas fa-plane-departure"></i>
+                            <span>Զբոսաշրջություն</span>
+                        </a>
+                    </div>
+                </div>
+
+                <a href="./how_to_use.html" class="btn btn-link how-to-use-link">
+                    <i class="fas fa-address-card"></i>
+                    <span>Ինչպես օգտվել</span>
+                </a>
+            </div>
+
+        </div>
+
+        <div class="col-md-4 col-sm-2 col-2 news-plus-button">
+            <a href="./publication.html" type="button" class="btn publish">
+                <span class="publish-item pr-1">Կատարել հրապարակում</span>
+                <i class="fas fa-plus"></i>
+            </a>
+        </div>
+
+    </div>
+</div>
+<!--End of News Type container-->
+
+<!-- Slider -->
+<div class="container top-slider">
+    <div class="slide-container regular slider my-3 d-flex">
+
+        <div class="slide-item searchly-border">
+            <a href="./news.html" class="image btn-link">
+                <img src="https://www.annauniv.edu/cccdm/img/publications.jpg" alt="" class="img">
+                <h5 class="text-ellipsis">Header</h5>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            </a>
+        </div>
+        <!--slide-item-->
+
+        <div class="slide-item searchly-border">
+            <a href="./news.html" class="image btn-link">
+                <img src="https://www.hcsa.org.sg/wp-content/uploads/2018/10/181015-HCSA-Res-12-Publication-banner.jpg" alt="" class="img">
+                <h5 class="text-ellipsis">Header</h5>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            </a>
+        </div>
+        <!--slide-item-->
+
+        <div class="slide-item searchly-border">
+            <a href="./news.html" class="image btn-link">
+                <img src="https://www.ansto.gov.au/sites/default/files/styles/hero_image/public/hero-images/Highlights_5.jpg?itok=IT1pc8bG" alt="" class="img">
+                <h5 class="text-ellipsis">Header</h5>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            </a>
+        </div>
+        <!--slide-item-->
+
+        <div class="slide-item searchly-border">
+            <a href="./news.html" class="image btn-link">
+                <img src="https://www.worldbank.org/content/dam/photos/780x439/2016/feb-5/Journals_2.jpg" alt="" class="img">
+                <h5 class="text-ellipsis">Header</h5>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            </a>
+        </div>
+        <!--slide-item-->
+
+        <div class="slide-item searchly-border">
+            <a href="./news.html" class="image btn-link">
+                <img src="https://www.dw.com/image/51296565_302.jpg" alt="" class="img">
+                <h5 class="text-ellipsis">Header</h5>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            </a>
+        </div>
+        <!--slide-item-->
+
+        <div class="slide-item searchly-border">
+            <a href="./news.html" class="image btn-link">
+                <img src="https://gayecrispin.files.wordpress.com/2013/03/did-you-know-kind-people-have-poster.jpg?w=584" alt="" class="img">
+                <h5 class="text-ellipsis">Header</h5>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            </a>
+        </div>
+        <!--slide-item-->
+
+        <div class="slide-item searchly-border">
+            <a href="./news.html" class="image btn-link">
+                <img src="https://www.acm.org/binaries/content/gallery/acm/ctas/practical_content_journals.jpg/practical_content_journals.jpg/acm%3Adesktopcta" alt="" class="img">
+                <h5 class="text-ellipsis">Header</h5>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            </a>
+        </div>
+        <!--slide-item-->
+
+        <div class="slide-item searchly-border">
+            <a href="./news.html" class="image btn-link">
+                <img src="https://lh3.googleusercontent.com/proxy/Mw2n1uU1HgpOoZbEYLUlAhCsLXuw7i7L_ka5JLNjX1_tTmueoLf64UW1Chvl1rCpriyw8iqVkELsUuh9Fd4oRUBokbpfAenullaq" alt="" class="img">
+                <h5 class="text-ellipsis">Header</h5>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            </a>
+        </div>
+        <!--slide-item-->
+
+    </div>
+</div>
+<!-- End of Slider -->
+
+
+<div class="container news-feed-container">
+
+    <div class="d-flex justify-content-between pb-4">
+
+        <div class="news-container">
+
+            <div class="pb-3">
+                <div class="searchly-border p-md-3 p-2 news-block">
+
+                    <!-- News Slider -->
+                    <div class="news-slide-block">
+                        <div class="news-slide regular slider my-3">
+                            <div class="slide-item slide-image">
+                                <img src="https://businesslaw.curtin.edu.au/wp-content/uploads/sites/5/2015/08/primary-publication-reports-720x405.jpg" alt="" class="img">
+                            </div>
+                            <!--slide-item-->
+                            <div class="slide-item slide-image">
+                                <img src="https://www.uniprint.uwa.edu.au/__data/assets/image/0011/2985302/UnitMaterials.jpg" alt="" class="img">
+                            </div>
+                            <!--slide-item-->
+                            <div class="slide-item slide-image">
+                                <img src="https://2pq59h16egf82pnlft1f0yio-wpengine.netdna-ssl.com/wp-content/uploads/2018/07/atomicdust-branding-campaign-ucity-school-district-flyers.jpg" alt="" class="img">
+                            </div>
+                            <!--slide-item-->
+                        </div>
+                    </div>
+                    <!-- End of News Slider -->
+
+                    <div class="content-block pl-3">
+                        <div class="text-block">
+                            <div class="header">
+                                <a href="news.html" class="btn-link">Նորություններ հայաստանում</a>
+                            </div>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                At doloremque eveniet facilis, iure maiores necessitatibus
+                                quaerat quasi quis quos. Adipisci autem consectetur culpa
+                                deserunt ducimus earum, expedita in labore modi nobis quasi
+                                qui reiciendis repudiandae?
+                                <span>...</span>
+                            </p>
+                        </div>
+
+                        <div class="share-block pt-2">
+                            <div class="share">
+                                <button type="button" class="btn btn-sm" data-toggle="modal" data-target="#exampleModal_4">
+                                    <i class="fas fa-share"></i>
+                                    <span>share</span>
+                                </button>
+                            </div>
+                            <div class="comment px-1">
+                                <a href="./news.html" class="btn btn-sm">
+                                    <i class="fas fa-comments"></i>
+                                    <span>comment</span>
+                                </a>
+                            </div>
+                            <div class="dots">
+                                <a href="./news.html" class="btn btn-sm px-3">
+                                    <span>•••</span>
+                                </a>
+                            </div>
+                        </div>
+                        <!--share-block-->
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="pb-3">
+                <div class="searchly-border p-md-3 p-2 news-block">
+
+                    <!-- News Slider -->
+                    <div class="news-slide-block">
+                        <div class="news-slide regular slider my-3">
+                            <div class="slide-item slide-image">
+                                <img src="https://www.uniprint.uwa.edu.au/__data/assets/image/0011/2985302/UnitMaterials.jpg" alt="" class="img">
+                            </div>
+                            <!--slide-item-->
+                        </div>
+                    </div>
+                    <!-- End of News Slider -->
+
+                    <div class="content-block pl-3">
+                        <div class="text-block">
+                            <div class="header">
+                                <a href="news.html" class="btn-link">Նորություններ հայաստանում</a>
+                            </div>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                At doloremque eveniet facilis, iure maiores necessitatibus
+                                quaerat quasi quis quos. Adipisci autem consectetur culpa
+                                deserunt ducimus earum, expedita in labore modi nobis quasi
+                                qui reiciendis repudiandae?
+                                <span>...</span>
+                            </p>
+                        </div>
+
+                        <div class="share-block pt-2">
+                            <div class="share">
+                                <button type="button" class="btn btn-sm" data-toggle="modal" data-target="#exampleModal_4">
+                                    <i class="fas fa-share"></i>
+                                    <span>share</span>
+                                </button>
+                            </div>
+                            <div class="comment px-1">
+                                <a href="./news.html" class="btn btn-sm">
+                                    <i class="fas fa-comments"></i>
+                                    <span>comment</span>
+                                </a>
+                            </div>
+                            <div class="dots">
+                                <a href="./news.html" class="btn btn-sm px-3">
+                                    <span>•••</span>
+                                </a>
+                            </div>
+                        </div>
+                        <!--share-block-->
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="pb-3">
+                <div class="searchly-border p-md-3 p-2 news-block">
+                    <img src="https://brhs.bordentown.k12.nj.us/apps/download/fCQgChRRkomBwlBbKPiv7wUuHubSCzTRTOGzDQKHDADzCPSh.jpg/online-toolkit-banner-128x90.jpg">
+                </div>
+            </div>
+
+            <div class="pb-3">
+                <div class="searchly-border p-md-3 p-2 news-block">
+
+                    <!-- News Slider -->
+                    <div class="news-slide-block">
+                        <div class="news-slide regular slider my-3">
+                            <div class="slide-item slide-image">
+                                <img src="https://www.uniprint.uwa.edu.au/__data/assets/image/0011/2985302/UnitMaterials.jpg" alt="" class="img">
+                            </div>
+                            <!--slide-item-->
+                            <div class="slide-item slide-image">
+                                <img src="https://2pq59h16egf82pnlft1f0yio-wpengine.netdna-ssl.com/wp-content/uploads/2018/07/atomicdust-branding-campaign-ucity-school-district-flyers.jpg" alt="" class="img">
+                            </div>
+                            <!--slide-item-->
+                        </div>
+                    </div>
+                    <!-- End of News Slider -->
+
+                    <div class="content-block pl-3">
+                        <div class="text-block">
+                            <div class="header">
+                                <a href="news.html" class="btn-link">Նորություններ հայաստանում</a>
+                            </div>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                At doloremque eveniet facilis, iure maiores necessitatibus
+                                quaerat quasi quis quos. Adipisci autem consectetur culpa
+                                deserunt ducimus earum, expedita in labore modi nobis quasi
+                                qui reiciendis repudiandae?
+                                <span>...</span>
+                            </p>
+                        </div>
+
+                        <div class="share-block pt-2">
+                            <div class="share">
+                                <button type="button" class="btn btn-sm" data-toggle="modal" data-target="#exampleModal_4">
+                                    <i class="fas fa-share"></i>
+                                    <span>share</span>
+                                </button>
+                            </div>
+                            <div class="comment px-1">
+                                <a href="./news.html" class="btn btn-sm">
+                                    <i class="fas fa-comments"></i>
+                                    <span>comment</span>
+                                </a>
+                            </div>
+                            <div class="dots">
+                                <a href="./news.html" class="btn btn-sm px-3">
+                                    <span>•••</span>
+                                </a>
+                            </div>
+                        </div>
+                        <!--share-block-->
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="pb-3">
+                <div class="searchly-border p-md-3 p-2 news-block">
+
+                    <!-- News Slider -->
+                    <div class="news-slide-block">
+                        <div class="news-slide regular slider my-3">
+                            <div class="slide-item slide-image">
+                                <img src="https://businesslaw.curtin.edu.au/wp-content/uploads/sites/5/2015/08/primary-publication-reports-720x405.jpg" alt="" class="img">
+                            </div>
+                            <!--slide-item-->
+                            <div class="slide-item slide-image">
+                                <img src="https://www.uniprint.uwa.edu.au/__data/assets/image/0011/2985302/UnitMaterials.jpg" alt="" class="img">
+                            </div>
+                            <!--slide-item-->
+                            <div class="slide-item slide-image">
+                                <img src="https://2pq59h16egf82pnlft1f0yio-wpengine.netdna-ssl.com/wp-content/uploads/2018/07/atomicdust-branding-campaign-ucity-school-district-flyers.jpg" alt="" class="img">
+                            </div>
+                            <!--slide-item-->
+                        </div>
+                    </div>
+                    <!-- End of News Slider -->
+
+                    <div class="content-block pl-3">
+                        <div class="text-block">
+                            <div class="header">
+                                <a href="news.html" class="btn-link">Նորություններ հայաստանում</a>
+                            </div>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                At doloremque eveniet facilis, iure maiores necessitatibus
+                                quaerat quasi quis quos. Adipisci autem consectetur culpa
+                                deserunt ducimus earum, expedita in labore modi nobis quasi
+                                qui reiciendis repudiandae?
+                                <span>...</span>
+                            </p>
+                        </div>
+
+                        <div class="share-block pt-2">
+                            <div class="share">
+                                <button type="button" class="btn btn-sm" data-toggle="modal" data-target="#exampleModal_4">
+                                    <i class="fas fa-share"></i>
+                                    <span>share</span>
+                                </button>
+                            </div>
+                            <div class="comment px-1">
+                                <a href="./news.html" class="btn btn-sm">
+                                    <i class="fas fa-comments"></i>
+                                    <span>comment</span>
+                                </a>
+                            </div>
+                            <div class="dots">
+                                <a href="./news.html" class="btn btn-sm px-3">
+                                    <span>•••</span>
+                                </a>
+                            </div>
+                        </div>
+                        <!--share-block-->
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="pb-3">
+                <div class="searchly-border p-md-3 p-2 news-block">
+
+                    <!-- News Slider -->
+                    <div class="news-slide-block">
+                        <div class="news-slide regular slider my-3">
+                            <div class="slide-item slide-image">
+                                <img src="https://www.uniprint.uwa.edu.au/__data/assets/image/0011/2985302/UnitMaterials.jpg" alt="" class="img">
+                            </div>
+                            <!--slide-item-->
+                        </div>
+                    </div>
+                    <!-- End of News Slider -->
+
+                    <div class="content-block pl-3">
+                        <div class="text-block">
+                            <div class="header">
+                                <a href="news.html" class="btn-link">Նորություններ հայաստանում</a>
+                            </div>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                At doloremque eveniet facilis, iure maiores necessitatibus
+                                quaerat quasi quis quos. Adipisci autem consectetur culpa
+                                deserunt ducimus earum, expedita in labore modi nobis quasi
+                                qui reiciendis repudiandae?
+                                <span>...</span>
+                            </p>
+                        </div>
+
+                        <div class="share-block pt-2">
+                            <div class="share">
+                                <button type="button" class="btn btn-sm" data-toggle="modal" data-target="#exampleModal_4">
+                                    <i class="fas fa-share"></i>
+                                    <span>share</span>
+                                </button>
+                            </div>
+                            <div class="comment px-1">
+                                <a href="./news.html" class="btn btn-sm">
+                                    <i class="fas fa-comments"></i>
+                                    <span>comment</span>
+                                </a>
+                            </div>
+                            <div class="dots">
+                                <a href="./news.html" class="btn btn-sm px-3">
+                                    <span>•••</span>
+                                </a>
+                            </div>
+                        </div>
+                        <!--share-block-->
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="pb-3">
+                <div class="searchly-border p-md-3 p-2 news-block">
+                    <img src="https://ocde.us/EducationalServices/STEMandHumanities/STEM/PublishingImages/Pages/Computer-Science-Resources/AP%20CSP%20Image.png">
+                </div>
+            </div>
+
+            <div class="pb-3">
+                <div class="searchly-border p-md-3 p-2 news-block">
+
+                    <!-- News Slider -->
+                    <div class="news-slide-block">
+                        <div class="news-slide regular slider my-3">
+                            <div class="slide-item slide-image">
+                                <img src="https://businesslaw.curtin.edu.au/wp-content/uploads/sites/5/2015/08/primary-publication-reports-720x405.jpg" alt="" class="img">
+                            </div>
+                            <!--slide-item-->
+                            <div class="slide-item slide-image">
+                                <img src="https://www.uniprint.uwa.edu.au/__data/assets/image/0011/2985302/UnitMaterials.jpg" alt="" class="img">
+                            </div>
+                            <!--slide-item-->
+                            <div class="slide-item slide-image">
+                                <img src="https://2pq59h16egf82pnlft1f0yio-wpengine.netdna-ssl.com/wp-content/uploads/2018/07/atomicdust-branding-campaign-ucity-school-district-flyers.jpg" alt="" class="img">
+                            </div>
+                            <!--slide-item-->
+                        </div>
+                    </div>
+                    <!-- End of News Slider -->
+
+                    <div class="content-block pl-3">
+                        <div class="text-block">
+                            <div class="header">
+                                <a href="news.html" class="btn-link">Նորություններ հայաստանում</a>
+                            </div>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                At doloremque eveniet facilis, iure maiores necessitatibus
+                                quaerat quasi quis quos. Adipisci autem consectetur culpa
+                                deserunt ducimus earum, expedita in labore modi nobis quasi
+                                qui reiciendis repudiandae?
+                                <span>...</span>
+                            </p>
+                        </div>
+
+                        <div class="share-block pt-2">
+                            <div class="share">
+                                <button type="button" class="btn btn-sm" data-toggle="modal" data-target="#exampleModal_4">
+                                    <i class="fas fa-share"></i>
+                                    <span>share</span>
+                                </button>
+                            </div>
+                            <div class="comment px-1">
+                                <a href="./news.html" class="btn btn-sm">
+                                    <i class="fas fa-comments"></i>
+                                    <span>comment</span>
+                                </a>
+                            </div>
+                            <div class="dots">
+                                <a href="./news.html" class="btn btn-sm px-3">
+                                    <span>•••</span>
+                                </a>
+                            </div>
+                        </div>
+                        <!--share-block-->
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="pb-3">
+                <div class="searchly-border p-md-3 p-2 news-block">
+
+                    <!-- News Slider -->
+                    <div class="news-slide-block">
+                        <div class="news-slide regular slider my-3">
+                            <div class="slide-item slide-image">
+                                <img src="https://www.uniprint.uwa.edu.au/__data/assets/image/0011/2985302/UnitMaterials.jpg" alt="" class="img">
+                            </div>
+                            <!--slide-item-->
+                        </div>
+                    </div>
+                    <!-- End of News Slider -->
+
+                    <div class="content-block pl-3">
+                        <div class="text-block">
+                            <div class="header">
+                                <a href="news.html" class="btn-link">Նորություններ հայաստանում</a>
+                            </div>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                At doloremque eveniet facilis, iure maiores necessitatibus
+                                quaerat quasi quis quos. Adipisci autem consectetur culpa
+                                deserunt ducimus earum, expedita in labore modi nobis quasi
+                                qui reiciendis repudiandae?
+                                <span>...</span>
+                            </p>
+                        </div>
+
+                        <div class="share-block pt-2">
+                            <div class="share">
+                                <button type="button" class="btn btn-sm" data-toggle="modal" data-target="#exampleModal_4">
+                                    <i class="fas fa-share"></i>
+                                    <span>share</span>
+                                </button>
+                            </div>
+                            <div class="comment px-1">
+                                <a href="./news.html" class="btn btn-sm">
+                                    <i class="fas fa-comments"></i>
+                                    <span>comment</span>
+                                </a>
+                            </div>
+                            <div class="dots">
+                                <a href="./news.html" class="btn btn-sm px-3">
+                                    <span>•••</span>
+                                </a>
+                            </div>
+                        </div>
+                        <!--share-block-->
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="pb-3">
+                <div class="searchly-border p-md-3 p-2 news-block">
+                    <img src="https://brhs.bordentown.k12.nj.us/apps/download/fCQgChRRkomBwlBbKPiv7wUuHubSCzTRTOGzDQKHDADzCPSh.jpg/online-toolkit-banner-128x90.jpg">
+                </div>
+            </div>
+
+            <div class="pb-3">
+                <div class="searchly-border p-md-3 p-2 news-block">
+
+                    <!-- News Slider -->
+                    <div class="news-slide-block">
+                        <div class="news-slide regular slider my-3">
+                            <div class="slide-item slide-image">
+                                <img src="https://businesslaw.curtin.edu.au/wp-content/uploads/sites/5/2015/08/primary-publication-reports-720x405.jpg" alt="" class="img">
+                            </div>
+                            <!--slide-item-->
+                            <div class="slide-item slide-image">
+                                <img src="https://www.uniprint.uwa.edu.au/__data/assets/image/0011/2985302/UnitMaterials.jpg" alt="" class="img">
+                            </div>
+                            <!--slide-item-->
+                            <div class="slide-item slide-image">
+                                <img src="https://2pq59h16egf82pnlft1f0yio-wpengine.netdna-ssl.com/wp-content/uploads/2018/07/atomicdust-branding-campaign-ucity-school-district-flyers.jpg" alt="" class="img">
+                            </div>
+                            <!--slide-item-->
+                        </div>
+                    </div>
+                    <!-- End of News Slider -->
+
+                    <div class="content-block pl-3">
+                        <div class="text-block">
+                            <div class="header">
+                                <a href="news.html" class="btn-link">Նորություններ հայաստանում</a>
+                            </div>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                At doloremque eveniet facilis, iure maiores necessitatibus
+                                quaerat quasi quis quos. Adipisci autem consectetur culpa
+                                deserunt ducimus earum, expedita in labore modi nobis quasi
+                                qui reiciendis repudiandae?
+                                <span>...</span>
+                            </p>
+                        </div>
+
+                        <div class="share-block pt-2">
+                            <div class="share">
+                                <button type="button" class="btn btn-sm" data-toggle="modal" data-target="#exampleModal_4">
+                                    <i class="fas fa-share"></i>
+                                    <span>share</span>
+                                </button>
+                            </div>
+                            <div class="comment px-1">
+                                <a href="./news.html" class="btn btn-sm">
+                                    <i class="fas fa-comments"></i>
+                                    <span>comment</span>
+                                </a>
+                            </div>
+                            <div class="dots">
+                                <a href="./news.html" class="btn btn-sm px-3">
+                                    <span>•••</span>
+                                </a>
+                            </div>
+                        </div>
+                        <!--share-block-->
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="pb-3">
+                <div class="searchly-border p-md-3 p-2 news-block">
+
+                    <!-- News Slider -->
+                    <div class="news-slide-block">
+                        <div class="news-slide regular slider my-3">
+                            <div class="slide-item slide-image">
+                                <img src="https://www.uniprint.uwa.edu.au/__data/assets/image/0011/2985302/UnitMaterials.jpg" alt="" class="img">
+                            </div>
+                            <!--slide-item-->
+                        </div>
+                    </div>
+                    <!-- End of News Slider -->
+
+                    <div class="content-block pl-3">
+                        <div class="text-block">
+                            <div class="header">
+                                <a href="news.html" class="btn-link">Նորություններ հայաստանում</a>
+                            </div>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                At doloremque eveniet facilis, iure maiores necessitatibus
+                                quaerat quasi quis quos. Adipisci autem consectetur culpa
+                                deserunt ducimus earum, expedita in labore modi nobis quasi
+                                qui reiciendis repudiandae?
+                                <span>...</span>
+                            </p>
+                        </div>
+
+                        <div class="share-block pt-2">
+                            <div class="share">
+                                <button type="button" class="btn btn-sm" data-toggle="modal" data-target="#exampleModal_4">
+                                    <i class="fas fa-share"></i>
+                                    <span>share</span>
+                                </button>
+                            </div>
+                            <div class="comment px-1">
+                                <a href="./news.html" class="btn btn-sm">
+                                    <i class="fas fa-comments"></i>
+                                    <span>comment</span>
+                                </a>
+                            </div>
+                            <div class="dots">
+                                <a href="./news.html" class="btn btn-sm px-3">
+                                    <span>•••</span>
+                                </a>
+                            </div>
+                        </div>
+                        <!--share-block-->
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="pb-3">
+                <div class="searchly-border p-md-3 p-2 news-block">
+                    <img src="https://brhs.bordentown.k12.nj.us/apps/download/fCQgChRRkomBwlBbKPiv7wUuHubSCzTRTOGzDQKHDADzCPSh.jpg/online-toolkit-banner-128x90.jpg">
+                </div>
+            </div>
+
+            <div class="pb-3">
+                <div class="searchly-border p-md-3 p-2 news-block">
+
+                    <!-- News Slider -->
+                    <div class="news-slide-block">
+                        <div class="news-slide regular slider my-3">
+                            <div class="slide-item slide-image">
+                                <img src="https://businesslaw.curtin.edu.au/wp-content/uploads/sites/5/2015/08/primary-publication-reports-720x405.jpg" alt="" class="img">
+                            </div>
+                            <!--slide-item-->
+                            <div class="slide-item slide-image">
+                                <img src="https://www.uniprint.uwa.edu.au/__data/assets/image/0011/2985302/UnitMaterials.jpg" alt="" class="img">
+                            </div>
+                            <!--slide-item-->
+                            <div class="slide-item slide-image">
+                                <img src="https://2pq59h16egf82pnlft1f0yio-wpengine.netdna-ssl.com/wp-content/uploads/2018/07/atomicdust-branding-campaign-ucity-school-district-flyers.jpg" alt="" class="img">
+                            </div>
+                            <!--slide-item-->
+                        </div>
+                    </div>
+                    <!-- End of News Slider -->
+
+                    <div class="content-block pl-3">
+                        <div class="text-block">
+                            <div class="header">
+                                <a href="news.html" class="btn-link">Նորություններ հայաստանում</a>
+                            </div>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                At doloremque eveniet facilis, iure maiores necessitatibus
+                                quaerat quasi quis quos. Adipisci autem consectetur culpa
+                                deserunt ducimus earum, expedita in labore modi nobis quasi
+                                qui reiciendis repudiandae?
+                                <span>...</span>
+                            </p>
+                        </div>
+
+                        <div class="share-block pt-2">
+                            <div class="share">
+                                <button type="button" class="btn btn-sm" data-toggle="modal" data-target="#exampleModal_4">
+                                    <i class="fas fa-share"></i>
+                                    <span>share</span>
+                                </button>
+                            </div>
+                            <div class="comment px-1">
+                                <a href="./news.html" class="btn btn-sm">
+                                    <i class="fas fa-comments"></i>
+                                    <span>comment</span>
+                                </a>
+                            </div>
+                            <div class="dots">
+                                <a href="./news.html" class="btn btn-sm px-3">
+                                    <span>•••</span>
+                                </a>
+                            </div>
+                        </div>
+                        <!--share-block-->
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="pb-3">
+                <div class="searchly-border p-md-3 p-2 news-block">
+
+                    <!-- News Slider -->
+                    <div class="news-slide-block">
+                        <div class="news-slide regular slider my-3">
+                            <div class="slide-item slide-image">
+                                <img src="https://www.uniprint.uwa.edu.au/__data/assets/image/0011/2985302/UnitMaterials.jpg" alt="" class="img">
+                            </div>
+                            <!--slide-item-->
+                        </div>
+                    </div>
+                    <!-- End of News Slider -->
+
+                    <div class="content-block pl-3">
+                        <div class="text-block">
+                            <div class="header">
+                                <a href="news.html" class="btn-link">Նորություններ հայաստանում</a>
+                            </div>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                At doloremque eveniet facilis, iure maiores necessitatibus
+                                quaerat quasi quis quos. Adipisci autem consectetur culpa
+                                deserunt ducimus earum, expedita in labore modi nobis quasi
+                                qui reiciendis repudiandae?
+                                <span>...</span>
+                            </p>
+                        </div>
+
+                        <div class="share-block pt-2">
+                            <div class="share">
+                                <button type="button" class="btn btn-sm" data-toggle="modal" data-target="#exampleModal_4">
+                                    <i class="fas fa-share"></i>
+                                    <span>share</span>
+                                </button>
+                            </div>
+                            <div class="comment px-1">
+                                <a href="./news.html" class="btn btn-sm">
+                                    <i class="fas fa-comments"></i>
+                                    <span>comment</span>
+                                </a>
+                            </div>
+                            <div class="dots">
+                                <a href="./news.html" class="btn btn-sm px-3">
+                                    <span>•••</span>
+                                </a>
+                            </div>
+                        </div>
+                        <!--share-block-->
+
+                    </div>
+                </div>
+            </div>
+
+            <!--spinner-->
+            <div class="spinner"></div>
+            <!--End of spinner-->
+
+        </div>
+        <!-- End of news-container -->
+
+        <div class="lot-of-comments-news-container">
+
+            <div class="comments-news-container">
+
+                <div class="pb-2">
+                <div class="searchly-border lot-of-comments-block">
+                    <a href="./news.html" class="lot-of-comments btn-link">
+                        <img src="https://op.europa.eu/o/opportal-service/thumbnail/cellar/1d15f898-0a3a-11e8-966a-01aa75ed71a1.0001.01/DOC_2" alt="" class="img">
+                        <h5 class="text-ellipsis">Header</h5>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    </a>
+                </div>
+            </div>
+
+                <div class="pb-2">
+                    <div class="searchly-border lot-of-comments-block">
+                        <a href="./news.html" class="lot-of-comments btn-link">
+                            <img src="https://lh3.googleusercontent.com/proxy/WyWmKyw8g9Y8_6uL09QmTrssANsx6ex4J0DQDZL7UGud5efagHUc1Dt8EISYS-Fi90F46kXAz23mCrs_j-EIIp9PrO-uixr7NiTqg-ccGJk0Kg" alt="" class="img">
+                            <h5 class="text-ellipsis">Header</h5>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="pb-2">
+                    <div class="searchly-border lot-of-comments-block">
+                        <img src="https://ps.w.org/yith-footer-banner/assets/icon-128x128.jpg?rev=1068427" alt="">
+                    </div>
+                </div>
+
+                <div class="pb-2">
+                    <div class="searchly-border lot-of-comments-block">
+                        <a href="./news.html" class="lot-of-comments btn-link">
+                            <img src="https://www.kotobee.com/blog/wp-content/uploads/2017/04/main-1.jpg" alt="" class="img">
+                            <h5 class="text-ellipsis">Header</h5>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="pb-2">
+                    <div class="searchly-border lot-of-comments-block">
+                        <a href="./news.html" class="lot-of-comments btn-link">
+                            <img src="https://www.duffandphelps.co.uk/-/media/feature/insights/desktop/publications.ashx" alt="" class="img">
+                            <h5 class="text-ellipsis">Header</h5>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="pb-2">
+                    <div class="searchly-border lot-of-comments-block">
+                        <img src="https://findicons.com/files/icons/1258/warcraft_volume_1/128/alliance_banner.png" alt="">
+                    </div>
+                </div>
+
+                <div class="pb-2">
+                    <div class="searchly-border lot-of-comments-block">
+                        <a href="./news.html" class="lot-of-comments btn-link">
+                            <img src="https://www.kotobee.com/blog/wp-content/uploads/2017/04/main-1.jpg" alt="" class="img">
+                            <h5 class="text-ellipsis">Header</h5>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="pb-2">
+                    <div class="searchly-border lot-of-comments-block">
+                        <img src="https://images.wallpapersden.com/image/download/game-of-thrones-banner-hd-pics-01_40057_128x128.jpg" alt="">
+                    </div>
+                </div>
+
+                <div class="pb-2">
+                    <div class="searchly-border lot-of-comments-block">
+                        <a href="./news.html" class="lot-of-comments btn-link">
+                            <img src="https://www.duffandphelps.co.uk/-/media/feature/insights/desktop/publications.ashx" alt="" class="img">
+                            <h5 class="text-ellipsis">Header</h5>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="pb-2">
+                    <div class="searchly-border lot-of-comments-block">
+                        <a href="./news.html" class="lot-of-comments btn-link">
+                            <img src="https://www.duffandphelps.co.uk/-/media/feature/insights/desktop/publications.ashx" alt="" class="img">
+                            <h5 class="text-ellipsis">Header</h5>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="pb-2">
+                    <div class="searchly-border lot-of-comments-block">
+                        <img src="https://icons.iconarchive.com/icons/iconarchive/blue-election/128/Election-Banner-icon.png" alt="">
+                    </div>
+                </div>
+
+                <div class="pb-2">
+                <div class="searchly-border lot-of-comments-block">
+                    <a href="./news.html" class="lot-of-comments btn-link">
+                        <img src="https://www.duffandphelps.co.uk/-/media/feature/insights/desktop/publications.ashx" alt="" class="img">
+                        <h5 class="text-ellipsis">Header</h5>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    </a>
+                </div>
+            </div>
+
+            </div>
+
+        </div>
+        <!-- End of lot-of-comments-news-container -->
+
+    </div>
+
+</div>
+<!--container-->
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal_4" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header d-flex align-items-center">
+                <h5 class="modal-title" id="exampleModalLabel_3">Կիսվել ...</h5>
+                <button type="button" class="close mr-0" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="sign-up-with d-flex align-items-center justify-content-between px-3">
+                    <a href="#" class="px-2 py-1 d-flex">
+                        <i class="fab fa-facebook-square"></i>
+                    </a>
+                    <a href="#" class="px-2 py-1 d-flex">
+                        <i class="fab fa-twitter-square"></i>
+                    </a>
+                    <a href="#" class="px-2 py-1 d-flex">
+                        <i class="fab fa-odnoklassniki-square"></i>
+                    </a>
+                    <a href="#" class="px-2 py-1 d-flex">
+                        <i class="fab fa-vk"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="modal-footer">
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End of Modal -->
+
+
+<button id="scroll-to-top" class="scroll-to-top-block">
+    <i class="fas fa-arrow-up"></i>
+</button>
+
+
+<script src="./Libs/jQuery/jquery.js"></script>
+<script src="./Libs/Bootstrap/popper.js"></script>
+<script src="./Libs/Bootstrap/bootstrap.js"></script>
+<script src="./Libs/JQuery_UI/jquery_1.12.4.js"></script>
+<script src="./Libs/JQuery_UI/jquery_ui.js"></script>
+<script src="./JS/datepicker_init.js"></script>
+<script src="./Libs/slick/slick.min.js"></script>
+<script src="./JS/slide_init.js"></script>
+<script src="./JS/scroll.js"></script>
+<script src="./JS/script.js"></script>
+
+</body>
+</html>

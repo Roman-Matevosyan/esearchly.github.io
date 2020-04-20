@@ -1,0 +1,508 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ESearchly</title>
+    <link rel="shortcut icon" type="image/png" href="./Images/Logo/esearchly_logo.png">
+    <link rel="stylesheet" href="./Libs/Bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="./Libs/font_awesome/font_awesome.css">
+    <link rel="stylesheet" href="./Libs/JQuery_UI/jquery_ui.css">
+    <link rel="stylesheet" href="./Libs/slick/slick.css">
+    <link rel="stylesheet" href="./Libs/slick/slick-theme.css">
+    <link rel="stylesheet" href="./CSS/style.css">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <a class="navbar-brand navbar-el-height" href="index.html">
+        <img src="./Images/Logo/esearchly_logo.png" alt="ES" class="img">
+    </a>
+    <div class="day-news-block">
+        <input type="submit" id="datepicker" value="03/23/2020" class="day-news searchly-border navbar-el-height">
+    </div>
+    <div class="navbar-collapse justify-content-end" id="navbarSupportedContent">
+        <form class="form-inline">
+            <i class="fas fa-search"></i>
+            <input class="form-control navbar-el-height" type="search" placeholder="Որոնում" aria-label="Search">
+        </form>
+        <ul class="navbar-nav">
+            <li class="nav-item log-in-block">
+                <a href="./sign_in.html" type="button" class="btn btn-light flex-center navbar-el-height log-in">Մուտք</a>
+            </li>
+            <li class="nav-item sign-up-block">
+                <a href="./sign_up.html" type="button" class="btn btn-dark flex-center navbar-el-height sign-up">Գրանցվել</a>
+            </li>
+            <li class="nav-item nav-flag-item dropdown searchly-border navbar-el-height mr-1">
+                <a class="nav-link dropdown-toggle flag-dropdown-btn" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <img src="./Images/flag_images/flag_of_Armenia.jpg" alt="" class="img">
+                </a>
+                <div class="dropdown-menu flag-dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">
+                        <img src="./Images/flag_images/flag_of_the_United_States.jpg" alt="" class="img">
+                    </a>
+                    <a class="dropdown-item" href="#">
+                        <img src="./Images/flag_images/flag_of_Russia.jpg" alt="" class="img">
+                    </a>
+                </div>
+            </li>
+
+            <li class="nav-item dropdown searchly-border navbar-el-height">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fas fa-user"></i>
+                </a>
+
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="./user.html">
+                        <i class="fas fa-user"></i>
+                        <span>Իմ պրոֆիլ</span>
+                    </a>
+                    <a class="dropdown-item" href="./balance.html">
+                        <i class="fas fa-address-card"></i>
+                        <span>Բալանս</span>
+                    </a>
+                    <a class="dropdown-item" href="./privacy_policy.html">
+                        <i class="fas fa-id-card-alt"></i>
+                        <span>Գաղտնիություն</span>
+                    </a>
+                    <a class="dropdown-item" href="./how_to_use.html">
+                        <i class="fas fa-id-card-alt"></i>
+                        <span>Ինչպես օգտվել</span>
+                    </a>
+                    <a class="dropdown-item" href="./FAQ.html">
+                        <i class="fas fa-radiation-alt"></i>
+                        <span>FAQ</span>
+                    </a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="./sign_in.html">
+                        <i class="fas fa-sign-in-alt"></i>
+                        <span>Մուտք / Գրանցվել</span>
+                    </a>
+                </div>
+
+            </li>
+        </ul>
+    </div>
+</nav>
+<!-- End of Navbar -->
+
+<!--News Type container-->
+<div class="container divider">
+    <div class="row">
+        <div class="col-md-8 col-sm-10 col-10 news-type-container">
+            <div class="news-type-block searchly-border">
+                <a href="index.html" class="btn btn-link">
+                    <i class="fas fa-home"></i>
+                    <span>Գլխավոր</span>
+                </a>
+                <a href="top_news.html" class="btn btn-link">
+                    <i class="fas fa-star"></i>
+                    <span>Թոփ</span>
+                </a>
+
+                <div class="dropdown">
+                    <a class="btn btn-link dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-sun"></i>
+                        <span>Կատեգորիաներ</span>
+                    </a>
+
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                        <a class="dropdown-item" href="#">
+                            <i class="fab fa-galactic-republic"></i>
+                            <span>Քաղաքականություն</span>
+                        </a>
+                        <a class="dropdown-item" href="#">
+                            <i class="fas fa-business-time"></i>
+                            <span>Էկոնոմիկա</span>
+                        </a>
+                        <a class="dropdown-item" href="#">
+                            <i class="fas fa-users"></i>
+                            <span>Հասարակություն</span>
+                        </a>
+                        <a class="dropdown-item" href="#">
+                            <i class="far fa-calendar-alt"></i>
+                            <span>Դեպքեր</span>
+                        </a>
+                        <a class="dropdown-item" href="#">
+                            <i class="fas fa-microscope"></i>
+                            <span>Գիտություն</span>
+                        </a>
+                        <a class="dropdown-item" href="#">
+                            <i class="fas fa-basketball-ball"></i>
+                            <span>Սպորտ</span>
+                        </a>
+                        <a class="dropdown-item" href="#">
+                            <i class="fas fa-plane-departure"></i>
+                            <span>Զբոսաշրջություն</span>
+                        </a>
+                    </div>
+                </div>
+
+                <a href="./how_to_use.html" class="btn btn-link how-to-use-link">
+                    <i class="fas fa-address-card"></i>
+                    <span>Ինչպես օգտվել</span>
+                </a>
+            </div>
+
+        </div>
+
+        <div class="col-md-4 col-sm-2 col-2 news-plus-button">
+            <a href="./publication.html" type="button" class="btn publish">
+                <span class="publish-item pr-1">Կատարել հրապարակում</span>
+                <i class="fas fa-plus"></i>
+            </a>
+        </div>
+
+    </div>
+</div>
+<!--End of News Type container-->
+
+<!-- Slider -->
+<div class="container top-slider">
+    <div class="slide-container regular slider my-3 d-flex">
+
+        <div class="slide-item searchly-border">
+            <a href="./news.html" class="image btn-link">
+                <img src="https://www.annauniv.edu/cccdm/img/publications.jpg" alt="" class="img">
+                <h5 class="text-ellipsis">Header</h5>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            </a>
+        </div>
+        <!--slide-item-->
+
+        <div class="slide-item searchly-border">
+            <a href="./news.html" class="image btn-link">
+                <img src="https://www.hcsa.org.sg/wp-content/uploads/2018/10/181015-HCSA-Res-12-Publication-banner.jpg" alt="" class="img">
+                <h5 class="text-ellipsis">Header</h5>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            </a>
+        </div>
+        <!--slide-item-->
+
+        <div class="slide-item searchly-border">
+            <a href="./news.html" class="image btn-link">
+                <img src="https://www.ansto.gov.au/sites/default/files/styles/hero_image/public/hero-images/Highlights_5.jpg?itok=IT1pc8bG" alt="" class="img">
+                <h5 class="text-ellipsis">Header</h5>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            </a>
+        </div>
+        <!--slide-item-->
+
+        <div class="slide-item searchly-border">
+            <a href="./news.html" class="image btn-link">
+                <img src="https://www.worldbank.org/content/dam/photos/780x439/2016/feb-5/Journals_2.jpg" alt="" class="img">
+                <h5 class="text-ellipsis">Header</h5>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            </a>
+        </div>
+        <!--slide-item-->
+
+        <div class="slide-item searchly-border">
+            <a href="./news.html" class="image btn-link">
+                <img src="https://www.dw.com/image/51296565_302.jpg" alt="" class="img">
+                <h5 class="text-ellipsis">Header</h5>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            </a>
+        </div>
+        <!--slide-item-->
+
+        <div class="slide-item searchly-border">
+            <a href="./news.html" class="image btn-link">
+                <img src="https://gayecrispin.files.wordpress.com/2013/03/did-you-know-kind-people-have-poster.jpg?w=584" alt="" class="img">
+                <h5 class="text-ellipsis">Header</h5>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            </a>
+        </div>
+        <!--slide-item-->
+
+        <div class="slide-item searchly-border">
+            <a href="./news.html" class="image btn-link">
+                <img src="https://www.acm.org/binaries/content/gallery/acm/ctas/practical_content_journals.jpg/practical_content_journals.jpg/acm%3Adesktopcta" alt="" class="img">
+                <h5 class="text-ellipsis">Header</h5>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            </a>
+        </div>
+        <!--slide-item-->
+
+        <div class="slide-item searchly-border">
+            <a href="./news.html" class="image btn-link">
+                <img src="https://lh3.googleusercontent.com/proxy/Mw2n1uU1HgpOoZbEYLUlAhCsLXuw7i7L_ka5JLNjX1_tTmueoLf64UW1Chvl1rCpriyw8iqVkELsUuh9Fd4oRUBokbpfAenullaq" alt="" class="img">
+                <h5 class="text-ellipsis">Header</h5>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            </a>
+        </div>
+        <!--slide-item-->
+
+    </div>
+</div>
+<!-- End of Slider -->
+
+
+<div class="container pb-5 news-page-content">
+
+    <div class="d-flex justify-content-between">
+
+        <div class="news-container">
+
+            <div class="news-page-item">
+                <div class="searchly-border p-sm-3 p-2 news-block">
+
+                    <div class="content-block pl-3">
+                        <div class="text-block">
+                            <div class="header">
+                                <h5>Նորություններ Հայաստանում</h5>
+                            </div>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                Iure nihil optio praesentium recusandae tempore vel, voluptatibus?
+                                Ad amet aperiam consequatur cupiditate, earum esse magnam maxime
+                                nemo nobis non officia pariatur perferendis quod reiciendis
+                                repellendus reprehenderit saepe sapiente sunt ullam vero.
+                            </p>
+                        </div>
+                    </div>
+                    <!--content-block-->
+
+                    <div class="image-block">
+                        <img src="https://businesslaw.curtin.edu.au/wp-content/uploads/sites/5/2015/08/primary-publication-reports-720x405.jpg" alt="" class="img">
+                    </div>
+                    <!--image-block-->
+
+                    <div class="content-block pl-3">
+                        <div class="text-block">
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                Assumenda dolore eligendi eum quisquam quod! Cumque ea quidem
+                                repudiandae. Consectetur facere ipsam ipsum officia veritatis.
+                                Ab adipisci animi aspernatur consequatur deleniti deserunt dolor
+                                dolores ducimus ea earum eos error esse eveniet illo incidunt
+                                ipsa iure labore laboriosam mollitia natus nulla numquam obcaecati,
+                                omnis perferendis quae qui quia quibusdam quidem, ratione repudiandae
+                                sed sit totam veniam! Architecto commodi fuga in minus ullam.
+                            </p>
+                        </div>
+                    </div>
+                    <!--content-block-->
+
+                    <div class="iframe">
+                        <iframe width="100%" height="315" src="https://www.youtube.com/embed/-j0dlcfekqw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <!-- iframe -->
+
+                    <div class="content-block pl-3">
+                        <div class="text-block">
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                Asperiores autem commodi dolores dolorum error excepturi,
+                                expedita fugit, in iste laborum maxime neque perspiciatis
+                                possimus quasi quibusdam ratione sunt? Atque culpa debitis
+                                distinctio, dolor, eum ipsa itaque minima officia pariatur,
+                                quis recusandae ut veniam! Ad aliquid at, beatae consequatur
+                                cumque debitis dolorem, dolorum ea eum harum id molestias
+                                necessitatibus nesciunt nobis, odit praesentium provident
+                                reiciendis rerum similique sint vitae voluptate voluptatum!
+                            </p>
+                        </div>
+                    </div>
+                    <!--content-block-->
+
+                    <div class="image-block">
+                        <img src="https://www.uniprint.uwa.edu.au/__data/assets/image/0011/2985302/UnitMaterials.jpg" alt="" class="img">
+                    </div>
+                    <!--image-block-->
+
+                    <div class="share-block py-3 px-1">
+                        <div class="share">
+                            <button type="button" class="btn" data-toggle="modal" data-target="#exampleModal_5">
+                                <i class="fas fa-share"></i>
+                                <span>share</span>
+                            </button>
+                        </div>
+                    </div>
+                    <!--share-block-->
+
+                    <!--comments block-->
+                    <div class="comments-block">
+
+                        <h5 class="comments-header" id="elementtoScrollToID">Comments</h5>
+
+                        <div class="comments">
+
+                            <div class="d-flex py-2">
+                                <div class="user-image mr-2">
+                                    <img src="https://www.readdork.com/images/article/Artist-Images/G/Girl%20In%20Red/Dork%20Cover%20Shoot%202019/_crop1500x1000/girl-in-red-dork-cover-shot.jpg" alt="user" class="img">
+                                </div>
+                                <div class="comment">
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                        Aliquid beatae facere illo.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="d-flex py-2">
+                                <div class="user-image mr-2">
+                                    <img src="https://assets.capitalfm.com/2018/23/lilliya-scarlett-instagram-1528814125-custom-0.png" alt="user" class="img">
+                                </div>
+                                <div class="comment">
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                        A ea exercitationem nisi nostrum veniam vero. Accusantium animi
+                                        ea et labore molestias mollitia necessitatibus odio odit quas
+                                        quasi reiciendis, rerum ut!
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="d-flex py-2">
+                                <div class="user-image mr-2">
+                                    <img src="https://www.readdork.com/images/article/Artist-Images/G/Girl%20In%20Red/Dork%20Cover%20Shoot%202019/_crop1500x1000/girl-in-red-dork-cover-shot.jpg" alt="user" class="img">
+                                </div>
+                                <div class="comment">
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                        Aliquid beatae facere illo.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="d-flex py-2">
+                                <div class="user-image mr-2">
+                                    <img src="https://media.istockphoto.com/photos/pride-man-smiling-picture-id544358286?k=6&m=544358286&s=612x612&w=0&h=hTQxzaOwlaM39OdqZEV_aZokHhPSyBliAqxJgZJnMac=" alt="user" class="img">
+                                </div>
+                                <div class="comment">
+                                    <p>
+                                        Lorem ipsum dolor sit amet.
+                                    </p>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="input-block pt-4 pb-2 position-relative">
+                            <div class="incorrect-comment">Ձեր մեկնաբանությունը կոռեկտ չէ:</div>
+                            <div class="d-flex align-items-center">
+                                <div class="user-image mr-2">
+                                    <img src="https://www.atlassian.com/dam/jcr:ba03a215-2f45-40f5-8540-b2015223c918/Max-R_Headshot%20(1).jpg" alt="user" class="img">
+                                </div>
+                                <div class="input">
+                                    <input type="text" class="form-control" placeholder="Գրիր քո մեկնաբանությունը...">
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!--End of comments block-->
+
+                </div>
+            </div>
+
+        </div>
+        <!-- End of news-container -->
+
+        <div class="advertisement-container searchly-border" id="on-scroll-fixed">
+
+            <h2 style="text-align: center; margin-top: 20px; color: #0c5460;">Գովազդ</h2>
+
+        </div>
+        <!-- End of lot-of-comments-news-container -->
+
+    </div>
+
+</div>
+
+
+<!--footer-->
+<footer class="footer d-flex align-items-center py-3 mt-3">
+    <div class="container">
+
+        <div class="row justify-content-between">
+
+            <ul>
+                <li><a href="./index.html" class="btn-link">esearchly.com</a></li>
+                <li><a href="mailto:hello@esearchly.com" class="btn-link">hello@esearchly.com</a></li>
+            </ul>
+
+            <ul>
+                <li><a href="./privacy_policy.html" class="btn-link">Գաղտնիության քաղաքականություն</a></li>
+                <li><a href="./user_agreement.html" class="btn-link">Օգտագործման համաձայնագիր</a></li>
+            </ul>
+
+            <ul>
+                <li><a href="./how_to_use.html" class="btn-link">Ինչպես օգտվել</a></li>
+                <li><a href="./FAQ.html" class="btn-link">Հաճախ տրվող հարցեր</a></li>
+            </ul>
+
+        </div>
+        <!--row-->
+
+        <div class="py-2 copyright">
+            <div>
+                <span>Copyright &copy;</span>
+                <script>document.write(new Date().getFullYear());</script>,
+                <a href="https://nmlab.am/" target="_blank" class="btn-link font-weight-bold">NMLAB LLC</a>
+            </div>
+        </div>
+
+    </div>
+    <!--container-->
+</footer>
+<!--End of footer-->
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal_5" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header d-flex align-items-center">
+                <h5 class="modal-title" id="exampleModalLabel_3">Share in ...</h5>
+                <button type="button" class="close mr-0" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="sign-up-with d-flex align-items-center justify-content-between px-3">
+                    <a href="#" class="px-2 py-1 d-flex">
+                        <i class="fab fa-facebook-square"></i>
+                    </a>
+                    <a href="#" class="px-2 py-1 d-flex">
+                        <i class="fab fa-twitter-square"></i>
+                    </a>
+                    <a href="#" class="px-2 py-1 d-flex">
+                        <i class="fab fa-odnoklassniki-square"></i>
+                    </a>
+                    <a href="#" class="px-2 py-1 d-flex">
+                        <i class="fab fa-vk"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="modal-footer">
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End of Modal -->
+
+
+<button id="scroll-to-top" class="scroll-to-top-block">
+    <i class="fas fa-arrow-up"></i>
+</button>
+
+
+<script src="./Libs/jQuery/jquery.js"></script>
+<script src="./Libs/Bootstrap/popper.js"></script>
+<script src="./Libs/Bootstrap/bootstrap.js"></script>
+<script src="./Libs/JQuery_UI/jquery_1.12.4.js"></script>
+<script src="./Libs/JQuery_UI/jquery_ui.js"></script>
+<script src="./JS/datepicker_init.js"></script>
+<script src="./Libs/slick/slick.min.js"></script>
+<script src="./JS/slide_init.js"></script>
+<script src="./JS/scroll.js"></script>
+<script src="./JS/script.js"></script>
+
+</body>
+</html>

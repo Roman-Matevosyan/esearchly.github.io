@@ -1,0 +1,513 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ESearchly</title>
+    <link rel="shortcut icon" type="image/png" href="./Images/Logo/esearchly_logo.png">
+    <link rel="stylesheet" href="./Libs/Bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="./Libs/font_awesome/font_awesome.css">
+    <link rel="stylesheet" href="./Libs/JQuery_UI/jquery_ui.css">
+    <link rel="stylesheet" href="./Libs/slick/slick.css">
+    <link rel="stylesheet" href="./Libs/slick/slick-theme.css">
+    <link rel="stylesheet" href="./CSS/style.css">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <a class="navbar-brand navbar-el-height" href="index.html">
+        <img src="./Images/Logo/esearchly_logo.png" alt="ES" class="img">
+    </a>
+    <div class="day-news-block">
+        <input type="submit" id="datepicker" value="03/23/2020" class="day-news searchly-border navbar-el-height">
+    </div>
+    <div class="navbar-collapse justify-content-end" id="navbarSupportedContent">
+        <form class="form-inline">
+            <i class="fas fa-search"></i>
+            <input class="form-control navbar-el-height" type="search" placeholder="Որոնում" aria-label="Search">
+        </form>
+        <ul class="navbar-nav">
+            <li class="nav-item log-in-block">
+                <a href="./sign_in.html" type="button" class="btn btn-light flex-center navbar-el-height log-in">Մուտք</a>
+            </li>
+            <li class="nav-item sign-up-block">
+                <a href="./sign_up.html" type="button" class="btn btn-dark flex-center navbar-el-height sign-up">Գրանցվել</a>
+            </li>
+            <li class="nav-item nav-flag-item dropdown searchly-border navbar-el-height mr-1">
+                <a class="nav-link dropdown-toggle flag-dropdown-btn" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <img src="./Images/flag_images/flag_of_Armenia.jpg" alt="" class="img">
+                </a>
+                <div class="dropdown-menu flag-dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">
+                        <img src="./Images/flag_images/flag_of_the_United_States.jpg" alt="" class="img">
+                    </a>
+                    <a class="dropdown-item" href="#">
+                        <img src="./Images/flag_images/flag_of_Russia.jpg" alt="" class="img">
+                    </a>
+                </div>
+            </li>
+
+            <li class="nav-item dropdown searchly-border navbar-el-height">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fas fa-user"></i>
+                </a>
+
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="./user.html">
+                        <i class="fas fa-user"></i>
+                        <span>Իմ պրոֆիլ</span>
+                    </a>
+                    <a class="dropdown-item" href="./balance.html">
+                        <i class="fas fa-address-card"></i>
+                        <span>Բալանս</span>
+                    </a>
+                    <a class="dropdown-item" href="./privacy_policy.html">
+                        <i class="fas fa-id-card-alt"></i>
+                        <span>Գաղտնիություն</span>
+                    </a>
+                    <a class="dropdown-item" href="./how_to_use.html">
+                        <i class="fas fa-id-card-alt"></i>
+                        <span>Ինչպես օգտվել</span>
+                    </a>
+                    <a class="dropdown-item" href="./FAQ.html">
+                        <i class="fas fa-radiation-alt"></i>
+                        <span>FAQ</span>
+                    </a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="./sign_in.html">
+                        <i class="fas fa-sign-in-alt"></i>
+                        <span>Մուտք / Գրանցվել</span>
+                    </a>
+                </div>
+
+            </li>
+        </ul>
+    </div>
+</nav>
+<!-- End of Navbar -->
+
+<!--News Type container-->
+<div class="container divider">
+    <div class="row">
+        <div class="col-md-8 col-sm-10 col-10 news-type-container">
+            <div class="news-type-block searchly-border">
+                <a href="index.html" class="btn btn-link">
+                    <i class="fas fa-home"></i>
+                    <span>Գլխավոր</span>
+                </a>
+                <a href="top_news.html" class="btn btn-link">
+                    <i class="fas fa-star"></i>
+                    <span>Թոփ</span>
+                </a>
+
+                <div class="dropdown">
+                    <a class="btn btn-link dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-sun"></i>
+                        <span>Կատեգորիաներ</span>
+                    </a>
+
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                        <a class="dropdown-item" href="#">
+                            <i class="fab fa-galactic-republic"></i>
+                            <span>Քաղաքականություն</span>
+                        </a>
+                        <a class="dropdown-item" href="#">
+                            <i class="fas fa-business-time"></i>
+                            <span>Էկոնոմիկա</span>
+                        </a>
+                        <a class="dropdown-item" href="#">
+                            <i class="fas fa-users"></i>
+                            <span>Հասարակություն</span>
+                        </a>
+                        <a class="dropdown-item" href="#">
+                            <i class="far fa-calendar-alt"></i>
+                            <span>Դեպքեր</span>
+                        </a>
+                        <a class="dropdown-item" href="#">
+                            <i class="fas fa-microscope"></i>
+                            <span>Գիտություն</span>
+                        </a>
+                        <a class="dropdown-item" href="#">
+                            <i class="fas fa-basketball-ball"></i>
+                            <span>Սպորտ</span>
+                        </a>
+                        <a class="dropdown-item" href="#">
+                            <i class="fas fa-plane-departure"></i>
+                            <span>Զբոսաշրջություն</span>
+                        </a>
+                    </div>
+                </div>
+
+                <a href="./how_to_use.html" class="btn btn-link how-to-use-link">
+                    <i class="fas fa-address-card"></i>
+                    <span>Ինչպես օգտվել</span>
+                </a>
+            </div>
+
+        </div>
+
+        <div class="col-md-4 col-sm-2 col-2 news-plus-button">
+            <a href="./publication.html" type="button" class="btn publish">
+                <span class="publish-item pr-1">Կատարել հրապարակում</span>
+                <i class="fas fa-plus"></i>
+            </a>
+        </div>
+
+    </div>
+</div>
+<!--End of News Type container-->
+
+
+<div class="container mt-3 d-flex user-info-container">
+
+        <div class="user-block pr-md-3 pb-4">
+        <div class="user">
+            <div class="user-image">
+                <img src="./Images/default_images/user.png" alt="___user img___" class="img">
+            </div>
+
+            <div class="user-name mt-1 mb-3">
+                <span>Անուն Ազգանուն</span>
+            </div>
+        </div>
+        <!--user-->
+
+        <div class="user-control-buttons">
+            <a href="./user.html" class="btn btn-block">Իմ հրապարակումները</a>
+            <a href="./balance.html" class="btn btn-block">
+                <span>Բալանս</span>
+                <span class="pl-1 font-weight-bold">120</span>
+            </a>
+            <a href="./refresh_profile.html" class="btn btn-block">Թարմացնել պրոֆիլը</a>
+        </div>
+
+    </div>
+        <!--user-block-->
+
+        <div class="user-publications">
+
+            <div class="row">
+
+                <div class="pb-2 col-md-6 col-sm-6">
+                    <div class="searchly-border user-publication-block">
+                        <div class="publication">
+                            <a href="./news.html" class="btn-link">
+                                <img src="https://cdn.trinitypublications.com.au/media/wysiwyg/tcl/rock-pop-2018-splash.jpg" alt="" class="img">
+                                <h5 class="text-ellipsis  pt-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h5>
+                            </a>
+                            <p class="text-ellipsis">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                Consequatur deserunt doloremque excepturi numquam soluta!
+                                Cupiditate dolorum enim ipsam nulla voluptate!
+                            </p>
+                            <div class="btn-group d-flex p-2" role="group" aria-label="Basic example">
+                                <button type="button" class="btn" data-toggle="modal" data-target="#exampleModal_2">Թոփ</button>
+                                <button type="button" class="btn" data-toggle="modal" data-target="#exampleModal_3">Հատուկ</button>
+                                <a href="./publication.html" type="button" class="btn">Փոփոխել</a>
+                                <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal">Հեռացնել</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pb-2 col-md-6 col-sm-6">
+                    <div class="searchly-border user-publication-block">
+                        <div class="publication">
+                            <a href="./news.html" class="btn-link">
+                                <img src="https://icare.am/wp-content/uploads/2019/11/publications.jpg" alt="" class="img">
+                                <h5 class="text-ellipsis  pt-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h5>
+                            </a>
+                            <p class="text-ellipsis">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                Consequatur deserunt doloremque excepturi numquam soluta!
+                                Cupiditate dolorum enim ipsam nulla voluptate!
+                            </p>
+                            <div class="btn-group d-flex p-2" role="group" aria-label="Basic example">
+                                <button type="button" class="btn" data-toggle="modal" data-target="#exampleModal_2">Թոփ</button>
+                                <button type="button" class="btn" data-toggle="modal" data-target="#exampleModal_3">Հատուկ</button>
+                                <a href="./publication.html" type="button" class="btn">Փոփոխել</a>
+                                <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal">Հեռացնել</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="row">
+
+                <div class="pb-2 col-md-6 col-sm-6">
+                    <div class="searchly-border user-publication-block">
+                        <div class="publication">
+                            <a href="./news.html" class="btn-link">
+                                <img src="https://www.adambalen.com/wp-content/uploads/2015/03/publications.png" alt="" class="img">
+                                <h5 class="text-ellipsis  pt-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h5>
+                            </a>
+                            <p class="text-ellipsis">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                Consequatur deserunt doloremque excepturi numquam soluta!
+                                Cupiditate dolorum enim ipsam nulla voluptate!
+                            </p>
+                            <div class="btn-group d-flex p-2" role="group" aria-label="Basic example">
+                                <button type="button" class="btn" data-toggle="modal" data-target="#exampleModal_2">Թոփ</button>
+                                <button type="button" class="btn" data-toggle="modal" data-target="#exampleModal_3">Հատուկ</button>
+                                <a href="./publication.html" type="button" class="btn">Փոփոխել</a>
+                                <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal">Հեռացնել</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pb-2 col-md-6 col-sm-6">
+                    <div class="searchly-border user-publication-block">
+                        <div class="publication">
+                            <a href="./news.html" class="btn-link">
+                                <img src="https://www.aalto.fi/sites/g/files/flghsv161/files/styles/2_3_1380w_600h_n/public/2018-09/img_3327.jpg?h=77bd3ecb&itok=_wPi2ZSX" alt="" class="img">
+                                <h5 class="text-ellipsis  pt-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h5>
+                            </a>
+                            <p class="text-ellipsis">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                Consequatur deserunt doloremque excepturi numquam soluta!
+                                Cupiditate dolorum enim ipsam nulla voluptate!
+                            </p>
+                            <div class="btn-group d-flex p-2" role="group" aria-label="Basic example">
+                                <button type="button" class="btn" data-toggle="modal" data-target="#exampleModal_2">Թոփ</button>
+                                <button type="button" class="btn" data-toggle="modal" data-target="#exampleModal_3">Հատուկ</button>
+                                <a href="./publication.html" type="button" class="btn">Փոփոխել</a>
+                                <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal">Հեռացնել</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="row">
+
+                <div class="pb-2 col-md-6 col-sm-6">
+                    <div class="searchly-border user-publication-block">
+                        <div class="publication">
+                            <a href="./news.html" class="btn-link">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcS6rpWKhXIvoi2HrQLmTKsUY2tIRclhbtszHrqHvguWOrn6KiXM&usqp=CAU" alt="" class="img">
+                                <h5 class="text-ellipsis  pt-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h5>
+                            </a>
+                            <p class="text-ellipsis">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                Consequatur deserunt doloremque excepturi numquam soluta!
+                                Cupiditate dolorum enim ipsam nulla voluptate!
+                            </p>
+                            <div class="btn-group d-flex p-2" role="group" aria-label="Basic example">
+                                <button type="button" class="btn" data-toggle="modal" data-target="#exampleModal_2">Թոփ</button>
+                                <button type="button" class="btn" data-toggle="modal" data-target="#exampleModal_3">Հատուկ</button>
+                                <a href="./publication.html" type="button" class="btn">Փոփոխել</a>
+                                <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal">Հեռացնել</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pb-2 col-md-6 col-sm-6">
+                    <div class="searchly-border user-publication-block">
+                        <div class="publication">
+                            <a href="./news.html" class="btn-link">
+                                <img src="https://www.acm.org/binaries/content/gallery/acm/ctas/practical_content_journals.jpg/practical_content_journals.jpg/acm%3Adesktopcta" alt="" class="img">
+                                <h5 class="text-ellipsis  pt-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h5>
+                            </a>
+                            <p class="text-ellipsis">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                Consequatur deserunt doloremque excepturi numquam soluta!
+                                Cupiditate dolorum enim ipsam nulla voluptate!
+                            </p>
+                            <div class="btn-group d-flex p-2" role="group" aria-label="Basic example">
+                                <button type="button" class="btn" data-toggle="modal" data-target="#exampleModal_2">Թոփ</button>
+                                <button type="button" class="btn" data-toggle="modal" data-target="#exampleModal_3">Հատուկ</button>
+                                <a href="./publication.html" type="button" class="btn">Փոփոխել</a>
+                                <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal">Հեռացնել</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="row">
+
+                <div class="pb-2 col-md-6 col-sm-6">
+                    <div class="searchly-border user-publication-block">
+                        <div class="publication">
+                            <a href="./news.html" class="btn-link">
+                                <img src="https://www.fai-uim.ac.id/wp-content/uploads/2018/01/shutterstock_268007354.jpg" alt="" class="img">
+                                <h5 class="text-ellipsis  pt-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h5>
+                            </a>
+                            <p class="text-ellipsis">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                Consequatur deserunt doloremque excepturi numquam soluta!
+                                Cupiditate dolorum enim ipsam nulla voluptate!
+                            </p>
+                            <div class="btn-group d-flex p-2" role="group" aria-label="Basic example">
+                                <button type="button" class="btn" data-toggle="modal" data-target="#exampleModal_2">Թոփ</button>
+                                <button type="button" class="btn" data-toggle="modal" data-target="#exampleModal_3">Հատուկ</button>
+                                <a href="./publication.html" type="button" class="btn">Փոփոխել</a>
+                                <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal">Հեռացնել</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pb-2 col-md-6 col-sm-6">
+                    <div class="searchly-border user-publication-block">
+                        <div class="publication">
+                            <a href="./news.html" class="btn-link">
+                                <img src="https://www.univ-chlef.dz/en/wp-content/uploads/2019/02/Publications.jpg" alt="" class="img">
+                                <h5 class="text-ellipsis  pt-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h5>
+                            </a>
+                            <p class="text-ellipsis">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                Consequatur deserunt doloremque excepturi numquam soluta!
+                                Cupiditate dolorum enim ipsam nulla voluptate!
+                            </p>
+                            <div class="btn-group d-flex p-2" role="group" aria-label="Basic example">
+                                <button type="button" class="btn" data-toggle="modal" data-target="#exampleModal_2">Թոփ</button>
+                                <button type="button" class="btn" data-toggle="modal" data-target="#exampleModal_3">Հատուկ</button>
+                                <a href="./publication.html" type="button" class="btn">Փոփոխել</a>
+                                <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal">Հեռացնել</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        <!--user-publications-block-->
+
+</div>
+<!--container-->
+
+
+<!--footer-->
+<footer class="footer d-flex align-items-center py-3 mt-3">
+    <div class="container">
+
+        <div class="row justify-content-between">
+
+            <ul>
+                <li><a href="./index.html" class="btn-link">esearchly.com</a></li>
+                <li><a href="mailto:hello@esearchly.com" class="btn-link">hello@esearchly.com</a></li>
+            </ul>
+
+            <ul>
+                <li><a href="./privacy_policy.html" class="btn-link">Գաղտնիության քաղաքականություն</a></li>
+                <li><a href="./user_agreement.html" class="btn-link">Օգտագործման համաձայնագիր</a></li>
+            </ul>
+
+            <ul>
+                <li><a href="./how_to_use.html" class="btn-link">Ինչպես օգտվել</a></li>
+                <li><a href="./FAQ.html" class="btn-link">Հաճախ տրվող հարցեր</a></li>
+            </ul>
+
+        </div>
+        <!--row-->
+
+        <div class="py-2 copyright">
+            <div>
+                <span>Copyright &copy;</span>
+                <script>document.write(new Date().getFullYear());</script>,
+                <a href="https://nmlab.am/" target="_blank" class="btn-link font-weight-bold">NMLAB LLC</a>
+            </div>
+        </div>
+
+    </div>
+    <!--container-->
+</footer>
+<!--End of footer-->
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header d-flex align-items-center">
+                <h5 class="modal-title" id="exampleModalLabel">Հեռացնել հրապարակումը?</h5>
+                <button type="button" class="close mr-0" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                Համոզված եք, որ ուզում եք ջնջել հրապարակումը?
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger">Հեռացնել</button>
+                <button type="button" class="btn" data-dismiss="modal">Փակել</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End of Modal -->
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal_2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header d-flex align-items-center">
+                <h5 class="modal-title" id="exampleModalLabel_2">Շնորհավորում ենք.</h5>
+                <button type="button" class="close mr-0" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                Ձեր հրապարակումը տեղափոխվեց թոփ հրապարակումների բաժին:
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn" data-dismiss="modal">Փակել</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End of Modal -->
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal_3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header d-flex align-items-center">
+                <h5 class="modal-title" id="exampleModalLabel_3">Գործարքը ձախողվեց.</h5>
+                <button type="button" class="close mr-0" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                Ձեր հաշվին չկա բավարար գումար տվյալ հրապարակումը հատուկների բաժնում տեղակայելու համար.
+                Խնդրում ենք վերալիցքավորել ձեր հաշիվը.
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn" data-dismiss="modal">Փակել</button>
+                <a href="#" type="button" class="btn">Վերալիցքավորել</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End of Modal -->
+
+
+<button id="scroll-to-top" class="scroll-to-top-block">
+    <i class="fas fa-arrow-up"></i>
+</button>
+
+
+<script src="./Libs/jQuery/jquery.js"></script>
+<script src="./Libs/Bootstrap/popper.js"></script>
+<script src="./Libs/Bootstrap/bootstrap.js"></script>
+<script src="./Libs/JQuery_UI/jquery_1.12.4.js"></script>
+<script src="./Libs/JQuery_UI/jquery_ui.js"></script>
+<script src="./JS/datepicker_init.js"></script>
+<script src="./Libs/slick/slick.min.js"></script>
+<script src="./JS/slide_init.js"></script>
+<script src="./JS/scroll.js"></script>
+<script src="./JS/script.js"></script>
+
+</body>
+</html>
