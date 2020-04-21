@@ -143,9 +143,9 @@ $(document).ready(function () {
                 comment_input.value = '';
 
                 $('html, body').animate({
-                    scrollTop: $(comment_text[comment_text.length - 1]).offset().top - 100
+                    scrollTop: $(comment_text[comment_text.length - 1]).offset().top - 140
                 }, 150);
-                
+
 
                 incorrect_comment.css('display', 'none');
             } else {
