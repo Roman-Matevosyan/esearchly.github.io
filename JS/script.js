@@ -142,11 +142,10 @@ $(document).ready(function () {
                 comment_text[comment_text.length - 1].append($(comment_input).val());
                 comment_input.value = '';
 
-                if ($(this).width() > 1024) {
-                    $('html, body').animate({
-                        scrollTop: $(comment_text[comment_text.length - 1]).offset().top - 200
-                    }, 150);
-                }
+                $('html, body').animate({
+                    scrollTop: $(comment_text[comment_text.length - 1]).offset().top - 100
+                }, 150);
+                
 
                 incorrect_comment.css('display', 'none');
             } else {
