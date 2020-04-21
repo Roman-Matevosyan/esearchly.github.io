@@ -4,12 +4,13 @@ $(".slide-container").slick({
     infinite: true,
     slidesToShow: 4,
     slidesToScroll: 1,
+    swipeToSlide: true,
     autoplay: true,
     autoplaySpeed: 2500,
-    speed: 500,
+    speed: 700,
     touchThreshold: 10,
-    // waitForAnimate: false,
-    // easing: 'ease-in-out',
+    waitForAnimate: false,
+    easing: 'ease',
     responsive: [
         {
             breakpoint: 1024,
@@ -49,7 +50,7 @@ $(".slide-container").slick({
 
 // News Page Slide
 const news_slide = document.querySelectorAll(".news-slide")
-news_slide.forEach((el, i) => {
+news_slide.forEach((el) => {
     if (parseInt($(el).children().length) > 1) {
         $(el).slick({
             dots: true,
@@ -58,8 +59,10 @@ news_slide.forEach((el, i) => {
             slidesToScroll: 1,
             autoplay: true,
             autoplaySpeed: 2500,
-            speed: 500,
-            touchThreshold: 10
+            speed: 700,
+            touchThreshold: 10,
+            // waitForAnimate: false,
+            easing: 'ease-in',
         });
     } else {
         $(el).slick({

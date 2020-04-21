@@ -18,6 +18,17 @@ $(document).ready(function () {
         }, 500);
     });
 
+    // On focus input or textarea hide scroll-button
+    function hideOnFocus(element) {
+        $(element).focus(function () {
+            $(scrollButton).css('display', 'none');
+        }).blur(function () {
+            $(scrollButton).css('display', 'block');
+        });
+    }
+
+    hideOnFocus('input');
+    hideOnFocus('textarea');
 
     // On click the Comments button from the index
     // page, scroll to the comments on the news page.

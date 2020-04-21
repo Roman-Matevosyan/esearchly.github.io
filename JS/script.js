@@ -4,11 +4,11 @@ $(document).ready(function () {
     flag_toggle();
 
     function flag_toggle() {
-        $('.form-control').focus(function(e) {
+        $('.navbar .form-control').focus(function() {
             if($(window).width() < 560) {
                 $('.nav-flag-item').css('display', 'none');
             }
-        }).blur(function(e){
+        }).blur(function(){
             if($(window).width() < 560) {
                 $('.nav-flag-item').css('display', 'block');
             }

@@ -24,6 +24,9 @@ body {
     background-color: #3ab5b0;
     color: white;
 }
+*, *:focus {
+    outline: none !important;
+}
 .btn-link {
     color: #3ab5b0 !important;
 }
