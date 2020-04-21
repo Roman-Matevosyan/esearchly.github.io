@@ -1125,6 +1125,9 @@ textarea::-webkit-scrollbar-thumb {
     .news-plus-button {
         padding-left: 5px;
     }
+    .news-type-block .btn-link {
+        font-size: 13px;
+    }
     .categories-container .news-type-block .home {
         display: none;
     }
