@@ -61,7 +61,7 @@ news_slide.forEach((el) => {
             autoplaySpeed: 2500,
             speed: 700,
             touchThreshold: 10,
-            // waitForAnimate: false,
+            waitForAnimate: false,
             easing: 'ease-in',
         });
     } else {

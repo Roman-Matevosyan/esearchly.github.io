@@ -56,7 +56,6 @@ $(document).ready(function () {
         localStorage.setItem("comments_button_click", serialObj);
     }
 
-
     // On Scroll fixed comments block
     let news_feed_container;
     let comments_container;
