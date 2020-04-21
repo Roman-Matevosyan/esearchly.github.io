@@ -152,8 +152,14 @@ $(document).ready(function () {
                 incorrect_comment.css('display', 'block');
             }
         }
-    })
+    });
 
+    $(comment_input).on('focus', () => {
+        const comment_text = $('.news-page-content .comments-block .comments p')
+        $('html, body').animate({
+            scrollTop: $(comment_text[comment_text.length - 1]).offset().top - 140
+        }, 150);
+    });
 
     // FAQ button collapse
     const question = document.querySelectorAll('.question-button');
