@@ -22,15 +22,11 @@ $(document).ready(function () {
     // On focus of input or textarea - hide scroll-button
     function hideOnFocus(element) {
         $(element).focus(function () {
-            if ($(window).width() > 1024) {
-                blockScrollButton = false;
-                $(scrollButton).css('display', 'none');
-            }
+            blockScrollButton = false;
+            $(scrollButton).css('display', 'none');
         }).blur(function () {
-            if ($(window).width() > 1024) {
-                blockScrollButton = true;
-                $(scrollButton).css('display', 'block');
-            }
+            blockScrollButton = true;
+            $(scrollButton).css('display', 'block');
         });
     }
 
