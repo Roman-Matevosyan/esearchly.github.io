@@ -131,7 +131,7 @@ $(document).ready(function () {
         '                        </div>\n' +
         '                    </div>';
 
-
+    const scrollCommentSize = 100;
     $(comment_input).on('keypress', (event) => {
         if (event.which === 13 || event.keyCode === 13 || event.key === "Enter") {
             const incorrect_comment = $('.incorrect-comment');
@@ -142,10 +142,11 @@ $(document).ready(function () {
                 comment_text[comment_text.length - 1].append($(comment_input).val());
                 comment_input.value = '';
 
-                $('html, body').animate({
-                    scrollTop: $(comment_text[comment_text.length - 1]).offset().top - 140
-                }, 150);
-
+                if ($(window).width() > 1024) {
+                    $('html, body').animate({
+                        scrollTop: $(comment_text[comment_text.length - 1]).offset().top - scrollCommentSize
+                    }, 150);
+                }
 
                 incorrect_comment.css('display', 'none');
             } else {
@@ -155,11 +156,14 @@ $(document).ready(function () {
     });
 
     $(comment_input).on('focus', () => {
-        const comment_text = $('.news-page-content .comments-block .comments p')
-        $('html, body').animate({
-            scrollTop: $(comment_text[comment_text.length - 1]).offset().top - 140
-        }, 150);
+        if ($(window).width() > 1024) {
+            const comment_text = $('.news-page-content .comments-block .comments p')
+            $('html, body').animate({
+                scrollTop: $(comment_text[comment_text.length - 1]).offset().top - scrollCommentSize
+            }, 150);
+        }
     });
+
 
     // FAQ button collapse
     const question = document.querySelectorAll('.question-button');
