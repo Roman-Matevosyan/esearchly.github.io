@@ -757,6 +757,7 @@ textarea::-webkit-scrollbar-thumb {
     font-weight: 600;
     margin: 0;
     padding: 12px 8px;
+    cursor: pointer;
 }
 .chooseAFile-image-block {
     width: 100px;
