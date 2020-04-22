@@ -925,7 +925,7 @@ select option {
 .packet .packet-header {
     color: #4f755e;
 }
-.packet .packet-buttons-block span {
+.packet .packet-buttons-block .packet-type {
     font-size: 14px;
     font-weight: bold;
     color: #4f755e;
@@ -933,6 +933,10 @@ select option {
 }
 .packet .packet-buttons-block .free-packet {
     opacity: 0.7;
+}
+.packet .packet-buttons-block .packet-timer {
+    font-size: 12px;
+    text-align: center;
 }
 .special-packet-limit .special-news {
     border: 3px solid #bfcad4 !important;
