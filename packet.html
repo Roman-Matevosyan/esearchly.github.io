@@ -194,19 +194,19 @@
         <div class="row packet-buttons-block pb-4 px-3">
             <div class="col-lg-3 col-sm-6 py-2 px-sm-1">
                 <span class="free-packet">3 հրապարակում ամեն օր</span>
-                <a href="./user.html" class="btn btn-block disabled">Ակտիվացնել</a>
+                <a href="#" class="btn btn-block disabled">Ակտիվացնել</a>
             </div>
             <div class="col-lg-3 col-sm-6 py-2 px-sm-1">
                 <span>10 հրապարակում _ 7 օր</span>
-                <a href="./balance.html" class="btn btn-block">Ակտիվացնել</a>
+                <button class="btn btn-block" data-toggle="modal" data-target="#exampleModal_succes">Ակտիվացնել</button>
             </div>
             <div class="col-lg-3 col-sm-6 py-2 px-sm-1">
-                <span>15 հրապարակում _ 14 օր</span>
-                <a href="./packet.html" class="btn btn-block">Ակտիվացնել</a>
+                <span>10 հրապարակում _ 30 օր</span>
+                <button class="btn btn-block" data-toggle="modal" data-target="#exampleModal_succes">Ակտիվացնել</button>
             </div>
             <div class="col-lg-3 col-sm-6 py-2 px-sm-1">
                 <span>25 հրապարակում _ 30 օր</span>
-                <a href="./refresh_profile.html" class="btn btn-block">Ակտիվացնել</a>
+                <button class="btn btn-block" data-toggle="modal" data-target="#exampleModal_succes">Ակտիվացնել</button>
             </div>
         </div>
 
@@ -346,6 +346,30 @@
     <!--container-->
 </footer>
 <!--End of footer-->
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal_succes" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header d-flex align-items-center">
+                <h5 class="modal-title" id="exampleModalLabel_3">Շնորհավորում ենք.</h5>
+                <button type="button" class="close mr-0" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div>
+                    <span>Գործարքը հաջողությամբ կատարվեց.</span>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn" data-dismiss="modal">Փակել</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End of Modal -->
 
 
 <button id="scroll-to-top" class="scroll-to-top-block">
