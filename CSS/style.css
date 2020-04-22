@@ -54,6 +54,10 @@ textarea::-webkit-scrollbar-thumb {
     background-color: #c1c1c1;
     border-radius: 4px;
 }
+select option {
+    background-color: rgba(158, 206, 204, 0.3);
+    font-size: 18px;
+}
 .flex-center {
     display: flex;
     align-items: center;
@@ -596,13 +600,13 @@ textarea::-webkit-scrollbar-thumb {
 
 /* User Page */
 
+.user-content {
+    min-width: 1px;
+    width: 80%;
+}
 .user-block {
     max-width: 240px;
     width: 100%;
-}
-.user-publications {
-    min-width: 1px;
-    width: 80%;
 }
 .user-block .user-image {
     width: 140px;
@@ -912,20 +916,14 @@ textarea::-webkit-scrollbar-thumb {
 
 /* End of Balance Page */
 
+/* Packet */
 
-/* Footer */
-
-.footer {
-    background-color: rgba(158, 206, 204, 0.4);
-    width: 100%;
-}
-.footer ul {
-    list-style: none;
-    padding: 10px 15px;
-    margin: 0;
+.packet {
+    min-width: 1px;
+    width: 80%;
 }
 
-/* End of Footer */
+/* End of Packet */
 
 /* FAQ */
 
@@ -960,6 +958,21 @@ textarea::-webkit-scrollbar-thumb {
 }
 
 /* End of FAQ */
+
+/* Footer */
+
+.footer {
+    background-color: rgba(158, 206, 204, 0.4);
+    width: 100%;
+}
+.footer ul {
+    list-style: none;
+    padding: 10px 15px;
+    margin: 0;
+}
+
+/* End of Footer */
+
 
 /*----------Media Queries----------*/
 
@@ -1045,16 +1058,7 @@ textarea::-webkit-scrollbar-thumb {
         justify-content: space-around;
         max-width: unset !important;
     }
-    .user-publications {
-        width: 100% !important;
-    }
-    .publication-edit-container {
-        width: 100% !important;
-    }
-    .refresh-profile {
-        width: 100%;
-    }
-    .balance {
+    .user-content {
         width: 100%;
     }
     .custom-button-block,
