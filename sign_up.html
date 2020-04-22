@@ -90,7 +90,7 @@
 <!-- End of Navbar -->
 
 
-<div class="container divider sign-in-page">
+<div class="container divider sign-in-page px-1">
     <form class="searchly-border">
         <div class="header py-3 mb-3 d-flex">
             <h4 class="px-3">Գրանցվել</h4>
@@ -109,36 +109,42 @@
                 </a>
             </div>
         </div>
-        <div class="form-group px-3">
+        <div class="form-group px-sm-3 px-2">
             <label for="first-name">Անուն</label>
             <input type="text" class="form-control" id="first-name" placeholder="Անուն">
         </div>
-        <div class="form-group px-3">
+        <div class="form-group px-sm-3 px-2">
             <label for="last-name">Ազգանուն</label>
             <input type="text" class="form-control" id="last-name" placeholder="Ազգանուն">
         </div>
-        <div class="form-group px-3">
+        <div class="form-group px-sm-3 px-2">
             <label for="exampleInputEmail1">Էլեկտրոնային փոստի հասցե</label>
             <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Էլեկտրոնային փոստի հասցե">
         </div>
-        <div class="form-group px-3">
+        <div class="form-group px-sm-3 px-2">
             <label for="exampleInputPassword1">Գաղտնաբառ</label>
             <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Գաղտնաբառ">
         </div>
-        <div class="form-group px-3">
+        <div class="form-group px-sm-3 px-2">
             <label for="exampleInputPassword2">Կրկնել գաղտնաբառը</label>
             <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Կրկնել գաղտնաբառը">
         </div>
-        <div class="custom-control custom-checkbox pb-3 pl-5 pr-3">
+        <div class="custom-control custom-checkbox pb-3 pl-5 pr-sm-3 pr-2">
             <input type="checkbox" class="custom-control-input" id="customCheck1">
-            <label class="custom-control-label" for="customCheck1">Հիշել ինձ</label>
-            <div class="d-flex py-2">
-                <span class="pr-2">Արդեն գրանցված եք?</span>
-                <a href="./sign_in.html" class="btn-link">Մուտք</a>
-            </div>
+            <label class="custom-control-label" for="customCheck1">
+                <span>Ընդունում եմ</span>
+                <a href="./privacy_policy.html" class="btn-link">"Գաղտնիության քաղաքականություն"</a>
+                <span> և </span>
+                <a href="./user_agreement.html" class="btn-link">"Օգտագործման համաձայնագիր"</a>
+                <span> կանոնները</span>
+            </label>
         </div>
-        <div class="submit-block px-3 pb-3">
+        <div class="submit-block px-sm-3 px-2 pb-3">
             <button type="submit" class="btn btn-block font-weight-bold">Գրանցվել</button>
+        </div>
+        <div class="d-flex pt-1 pb-3 sign-in-offer px-3 justify-content-end">
+            <span class="pr-2">Արդեն գրանցված եք?</span>
+            <a href="./sign_in.html" class="btn-link">Մուտք</a>
         </div>
     </form>
 </div>

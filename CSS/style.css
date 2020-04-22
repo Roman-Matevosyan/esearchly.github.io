@@ -791,6 +791,7 @@ select option {
 .sign-in-page label {
     font-weight: 600;
     font-size: 15px;
+    line-height: 1.7;
 }
 .sign-in-page form {
     max-width: 450px;
@@ -816,7 +817,7 @@ select option {
     align-items: center;
     justify-content: space-between;
 }
-.sign-in-page .custom-checkbox .d-flex {
+.sign-in-page .sign-in-offer {
     font-size: 14px;
 }
 
