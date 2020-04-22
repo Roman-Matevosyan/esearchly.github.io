@@ -281,7 +281,7 @@ select option {
 .news-type-block a {
     font-weight: 600;
     border-radius: 4px;
-    transition: 0.3s;
+    transition: 0.1s;
     font-size: 15px;
     text-decoration: none;
     background-color: white;
@@ -588,14 +588,14 @@ select option {
 /* News Page */
 
 
-/* Top News Page */
+/* Special News Page */
 
-.top-news-container .lot-of-comments-block {
+.special-news-container .special-news {
     border: 3px solid #bfcad4 !important;
     height: 210px;
 }
 
-/* End of Top News Page */
+/* End of Special News Page */
 
 
 /* User Page */
@@ -916,14 +916,46 @@ select option {
 
 /* End of Balance Page */
 
-/* Packet */
+/* Packet Page */
 
 .packet {
     min-width: 1px;
     width: 80%;
 }
+.packet .packet-header {
+    color: #4f755e;
+}
+.packet .packet-buttons-block span {
+    font-size: 14px;
+    font-weight: bold;
+    color: #4f755e;
+    text-align: center;
+}
+.packet .packet-buttons-block .free-packet {
+    opacity: 0.7;
+}
+.special-packet-limit .special-news {
+    border: 3px solid #bfcad4 !important;
+    height: 210px;
+}
+.special-packet-limit .timer {
+    font-size: 20px;
+    color: #4f755e;
+}
+.packet-buttons-block .btn {
+    background-color: white;
+    border: 1px solid #c1c1c1;
+    color: #3ab5b0;
+    font-weight: 600;
+}
+.packet-buttons-block .btn:hover,
+.packet-buttons-block .btn:focus {
+    background-color: #3ab5b0;
+    border: 1px solid #3ab5b0;
+    color: white;
+}
 
-/* End of Packet */
+/* End of Packet Page */
 
 /* FAQ */
 
