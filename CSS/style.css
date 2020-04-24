@@ -444,7 +444,7 @@ select option {
 .news-container .share-block {
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: space-between;
 }
 .news-container .content-block {
     display: flex;
@@ -453,11 +453,16 @@ select option {
     width: 65%;
 }
 .news-container .content-block .header {
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 .news-container .content-block .header a {
     font-size: 18px;
     font-weight: 600;
+}
+.news-container .publish-date {
+    font-size: 12px;
+    font-weight: 600;
+    color: #4f755e;
 }
 .news-container .dots a span {
     font-weight: bold;
