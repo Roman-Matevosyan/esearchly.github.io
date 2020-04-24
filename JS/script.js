@@ -160,7 +160,7 @@ $(document).ready(function () {
             const comment_text = $('.news-page-content .comments-block .comments p')
             $('html, body').animate({
                 scrollTop: $(comment_text[comment_text.length - 1]).offset().top - scrollCommentSize
-            }, 150);
+            }, 250);
         }
     });
 
