@@ -130,7 +130,7 @@ select option {
     position: absolute !important;
     left: unset;
     right: 0;
-    top: 37px;
+    top: 36px;
 }
 .navbar .dropdown-menu a {
     font-weight: 600;
@@ -459,11 +459,6 @@ select option {
     font-size: 18px;
     font-weight: 600;
 }
-.news-container .publish-date {
-    font-size: 12px;
-    font-weight: 600;
-    color: #4f755e;
-}
 .news-container .dots a span {
     font-weight: bold;
 }
@@ -507,12 +502,7 @@ select option {
 .full-news-container .share-block {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-}
-.full-news-container .publish-date {
-    font-size: 12px;
-    font-weight: 600;
-    color: #4f755e;
+    justify-content: flex-end;
 }
 .advertisement-container {
     width: 25%;
