@@ -159,6 +159,14 @@ select option {
 .navbar .sign-up:focus {
     background-color: #3ab5b0 !important;
 }
+.navbar .dropdown-toggle::after {
+    display: none;
+}
+.navbar .dropdown-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 .navbar .dropdown-item:focus {
     background-color: #3ab5b0 !important;
 }
@@ -322,7 +330,11 @@ select option {
     border-color: #3ab5b0;
 }
 .news-type-block .dropdown-toggle {
-    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+.news-type-block .dropdown-toggle::after {
+    display: none;
 }
 .news-type-container {
     padding-right: 0;
