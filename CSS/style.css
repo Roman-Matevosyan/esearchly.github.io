@@ -169,12 +169,11 @@ select option {
     padding: 5px 5px 5px 32px;
     width: 100% !important;
     background-color: #f3f3f3;
-    transition: 0.2s;
+    transition: 0.15s;
 }
 .navbar .form-control:focus {
     box-shadow: none;
     background-color: white;
-    border-color: #e0e0e0 !important;
 }
 .navbar .form-inline {
     position: relative;
@@ -726,6 +725,13 @@ select option {
 .publication-edit-container {
     min-width: 1px;
     width: 80%;
+}
+.publication-edit-container .select-block i {
+    position: absolute;
+    right: 5px;
+    top: 4px;
+    font-size: 22px;
+    color: #3ab5b0;
 }
 .publication-edit-container select option:first-child {
     display: none;
