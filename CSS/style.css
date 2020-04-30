@@ -783,13 +783,11 @@ select option {
     font-weight: bold;
     font-size: 18px;
 }
-
-
 .chooseAFile-input-block {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    max-width: 250px;
+    max-width: 265px;
     width: 100%;
 }
 .custom-button-block .hidden-input {
@@ -797,13 +795,15 @@ select option {
 }
 .custom-button-block .custom-button {
     color: #3ab5b0;
+    font-size: 15px;
     font-weight: 600;
     margin: 0;
-    padding: 12px 8px;
+    padding: 14px 0;
     cursor: pointer;
 }
 .chooseAFile-image-block {
-    width: 100px;
+    max-width: 100px;
+    width: 100%;
     height: 50px;
     overflow: hidden;
 }
