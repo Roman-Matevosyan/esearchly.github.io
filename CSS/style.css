@@ -43,7 +43,7 @@ textarea:focus {
     border-width: 2px;
 }
 .navbar input:focus {
-    color: #3ab5b0 !important;
+    color: #4f755e;
 }
 textarea::-webkit-scrollbar {
     width: 10px;
