@@ -40,6 +40,7 @@ input:focus,
 select:focus,
 textarea:focus {
     border-color: #3ab5b0 !important;
+    border-width: 2px;
 }
 .navbar input:focus {
     color: #3ab5b0 !important;
