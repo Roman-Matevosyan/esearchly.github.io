@@ -56,7 +56,6 @@ textarea::-webkit-scrollbar-thumb {
     border-radius: 4px;
 }
 select option {
-    background-color: rgba(158, 206, 204, 0.3);
     font-size: 18px;
 }
 .flex-center {
