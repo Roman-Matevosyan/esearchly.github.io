@@ -68,6 +68,7 @@ $(document).ready(function () {
     let comments_container;
     let comments_container_div;
     let comments_container_offset_top;
+    let news_container;
     let rightMargin;
     let fixedWidth;
     let commentsHeight;
@@ -77,9 +78,12 @@ $(document).ready(function () {
         comments_container = $('.lot-of-comments-news-container');
         comments_container_div = $('.comments-news-container');
         comments_container_offset_top = $(comments_container_div).offset().top;
+        news_container = $('.news-container')
 
         refreshInfo();
-        onScrollFixed();
+        if ($(news_container).height() > $(comments_container_div).height()) {
+            onScrollFixed();
+        }
     } catch (e) {
         e.message;
     }
@@ -90,13 +94,17 @@ $(document).ready(function () {
         commentsHeight = $(comments_container_div).height() - $(window).height() + comments_container_offset_top;
     }
 
-    $(window).resize(function() {
-        refreshInfo();
-        onScrollFixed();
-    });
+    if ($(news_container).height() > $(comments_container_div).height()) {
+        $(window).resize(function() {
+            refreshInfo();
+            onScrollFixed();
+        });
+    }
 
     $(window).bind('scroll', function () {
-        onScrollFixed();
+        if ($(news_container).height() > $(comments_container_div).height()) {
+            onScrollFixed();
+        }
     });
 
     function onScrollFixed() {
